@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Блокиран достъп до Речко</title>
+	<style>
+		body {
+			padding: 5em 3em;
+			font-size: 120%;
+		}
+	</style>
+<script type="text/javascript">//<![CDATA[
+function printEmail(user, domain, parent) {
+	var email = getEmail(user, domain);
+	var a = document.createElement('a');
+	a.setAttribute('href', 'mailto:'+email);
+	a.appendChild(document.createTextNode(email));
+	document.getElementById(parent).appendChild(a);
+}
+
+function getEmail(user, domain) {
+	return user +'@'+ domain;
+}
+//]]></script>
+</head>
+<body>
+	<h1>Блокиран достъп до Речко</h1>
+	<div style="float:right"><img src="http://static.chitanka.info/maskot/down.orig.png"></div>
+	<p>
+	От вашия айпи адрес за един час са били направени повече от 400 заявки към <i>Речко</i> и достъпът ви е бил блокиран.
+	</p>
+	<p>Можете да се оплачете на администратора
+	(<span id="admin_email"></span>)<script type="text/javascript">/*<![CDATA[*/
+		printEmail('chitanka',/*boo*/ ['g','m','a','i','l','.','c','o','m'].join(''), 'admin_email');
+	/*]]>*/</script><noscript>(chitanka (при) gmail.com)</noscript>, като му обясните защо смятате, че тази забрана е неправомерна, или, евентуално, защо заслужавате отблокиране. Непременно включете <a href="http://whatsmyip.net/">айпи адреса си</a> в писмото си.</p>
+	<hr />
+	<address>
+		rechnik.chitanka.info
+	</address>
+</body>
+</html>

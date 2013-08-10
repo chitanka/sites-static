@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	RewriteRule ^lib(.*)    http://chitanka.info/legacy/index.php$1 [R=301,L]
+	RewriteRule ^mylib/(.*) http://chitanka.info/legacy/index.php/$1 [R=301,L]
+
+	# redirect MVR network
+	RewriteCond %{REMOTE_ADDR} ^212\.122\.166\.
+	RewriteRule .* http://www.bard.bg/ [R=301,L]
+</IfModule>

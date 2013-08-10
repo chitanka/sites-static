@@ -1,0 +1,4460 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Книги за поправка</title>
+<style>
+body {
+	padding: 0.5em;
+}
+.book h2 {
+	padding: .5em;
+	background-color: #069;
+	color: white;
+	border-radius: .6em;
+	cursor: pointer;
+	font-weight: normal;
+}
+.book h2:hover {
+	text-shadow: 1px 1px 2px black;
+}
+.book h2:hover .todo {
+	text-shadow: none;
+}
+.book h2:before {
+	content: "– ";
+}
+.book h2.collapsed {
+	background-color: #036;
+}
+.book h2.collapsed:before {
+	content: "+ ";
+}
+.template {
+	border: 1px dashed silver;
+	padding: 0 1em 1em 1em;
+	margin: 0 0 1em 0;
+}
+.template.half {
+	float: left;
+	width: 45%;
+	margin-right: 1em;
+}
+.template .content {
+	white-space: pre-wrap;
+	font-family: monospace;
+}
+.template h3 {
+	font-weight: bold;
+	cursor: pointer;
+}
+.template h3.collapsed {
+	text-decoration: underline;
+}
+.toggler {
+	margin-right: .5em;
+}
+.actions {
+	margin: 1em 0;
+}
+.todo {
+	border-radius: 50%;
+	padding: 5px 10px;
+	background-color: white;
+	color: black;
+}
+.todo-П {
+	background-color: orange;
+	color: black;
+}
+.todo-Т {
+	background-color: green;
+	color: white;
+}
+.todo-К {
+	background-color: green;
+	color: white;
+}
+.todo-Р {
+	background-color: maroon;
+	color: white;
+}
+.todo-Н {
+	background-color: grey;
+	color: white;
+}
+.clear {
+	clear: both;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script>
+jQuery(function($){
+	$(document).delegate("h2,h3", "click", function(){
+		$(this).toggleClass("collapsed").next().toggle();
+	});
+
+	$("h2").click();
+	$(".book-template h3,.book-info h3").click();
+
+	$('<a href="#">Сгъване/разгъване на всички</a>').click(function(){
+		$("h2").click();
+		return false;
+	}).appendTo(".actions");
+});
+</script>
+</head>
+<body>
+<hgroup>
+	<h1>Книги за поправка</h1>
+	<h2>(предложения от Mandor)</h2>
+</hgroup>
+
+<div class="actions">
+</div>
+<section class="book">
+	<h2><span class="todo todo-8" title="Добавяне на 8 текста">8</span> Аз съм легенда — Ричард Матисън</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/33">Читанка</a>, <a href="http://chitanka.info/admin/book/33/edit">Админ</a>, <a href="http://sfbg.us/book/OFIR-BFN-0028">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Дисекция на едно познато чудовище – Любомир Найденов (предговор) – стр.5
+    * Аз съм легенда – стр.19
+-&gt;  * Разкази
+-&gt;5957    o Вампир – стр.156
+-&gt;5958    o Вампир ли? – стр.160
+-&gt;5959    o Скрити таланти – стр.173
+-&gt;5960    o Досадната муха – стр.183
+-&gt;5961    o Възбуда – стр.207
+-&gt;5962    o Сирени – стр.215
+-&gt;  * Библиография и филмография – стр.219</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/5956">Дисекция на едно познато чудовище</a>
+&gt;	<a href="http://chitanka.info/text/5955">Аз съм легенда</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:5956}
+
+&gt;	{text:5955}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-3" title="Добавяне на 3 текста">3</span> Смърт на Марс</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/43">Читанка</a>, <a href="http://chitanka.info/admin/book/43/edit">Админ</a>, <a href="http://sfbg.us/book/NHRN-SFT-0016">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Момчето и неговото куче – Харлан Елисън – стр.3
+    * Съдът на зрителите – Алън Дийн Фостър – стр.51
+    * Планетата Шеол – Кордуайнър Смит – стр.86
+-&gt;  * Как умират на Марс – Лари Нивън – стр.137
+    * Имиджкон – Джордж Смит – стр.175
+-&gt;  * Съживиха го… – Дени Плектча – стр.185
+-&gt;  * Енциклопедия на световната фантастика — част VIII – стр.189</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/321">Момчето и неговото куче</a>
+&gt;	<a href="http://chitanka.info/text/11">Съдът на зрителите</a>
+&gt;	<a href="http://chitanka.info/text/148">Планетата Шеол</a>
+
+&lt;!--Как умират на Марс, Лари НИВЪН--&gt;
+&gt;	<a href="http://chitanka.info/text/1035">Имиджкон</a>
+
+&lt;!--Съживиха го, Дени ПЛЕКТЧА--&gt;
+&lt;!--Енциклопедия на световната фантастика, част VIII (ВАЙС-ВЕРКОР)--&gt;
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:321}
+
+&gt;	{text:11}
+
+&gt;	{text:148}
+
+	&lt;!--Как умират на Марс, Лари НИВЪН--&gt;
+&gt;	{text:1035}
+
+	&lt;!--Съживиха го, Дени ПЛЕКТЧА--&gt;
+	&lt;!--Енциклопедия на световната фантастика, част VIII (ВАЙС-ВЕРКОР)--&gt;
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	[[http://bgf.zavinagi.org/index.php/Поредица_SF_трилър|Смърт на Марс (агресивна фантастика)]]
+	Изд. Неохрон, Пловдив и Изд. Хермес, Пловдив, 1993
+	SF Трилър №16
+	Редактор, съставители: Иво Христов, Николай Странски
+	Превод: [не е указан; най-вероятно са съставителите]
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-8" title="Добавяне на 8 текста">8</span> Златните буболечки</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/142">Читанка</a>, <a href="http://chitanka.info/admin/book/142/edit">Админ</a>, <a href="http://sfbg.us/book/NHRN-SFT-0031">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Спасяване на човечеството – Айзък Азимов (прев. Григор Попхристов) – стр.5
+-&gt;  * Реалности (редакционен коментар) – стр.21
+    * Златните буболечки – Клифърд Саймък (прев. Григор Попхристов) – стр.23
+    * Трудна задача – Гордън Диксън (прев. Григор Попхристов) – стр.84
+    * Космонавтът идва – Хенри Гр. Фелсън (прев. Григор Попхристов) – стр.101
+    * Пътувайте по телеграфа! – Артър Кларк (прев. Григор Попхристов) – стр.119
+    * Ще почакате ли? – Алфред Бестър (прев. Григор Попхристов) – стр.127
+-&gt;  * Награди за фантастика и фентъзи
+-&gt;        o Награди ХЮГО (1953-1997). Част I – стр.21
+    * Зайци за луната – Реймънд Банкс (прев. Григор Попхристов) – стр.144
+-&gt;  * Конкурс – стр.166
+    * SF Made in Bulgaria
+          o Часът на буболечките – Мартин Петков – стр.167
+          o По избор на клиента – Мартин Петков – стр.171
+-&gt;  * За авторите – стр.181
+-&gt;  * Издателски съобщения – стр.183
+-&gt;  * Енциклопедия на световната фантастика – стр.185
+-&gt;  * Издателски съобщения – стр.191</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/11199">Спасяване на човечеството</a>
+&gt;	<a href="http://chitanka.info/text/11200">Златните буболечки</a>
+&gt;	<a href="http://chitanka.info/text/11201">Трудна задача</a>
+&gt;	<a href="http://chitanka.info/text/11202">Космонавтът идва</a>
+&gt;	<a href="http://chitanka.info/text/11203">Пътувайте по телеграфа!</a>
+&gt;	<a href="http://chitanka.info/text/11204">Ще почакате ли?</a>
+&gt;	<a href="http://chitanka.info/text/11205">Зайци за Луната</a>
+&gt;	<a href="http://chitanka.info/text/11206">Часът на буболечките</a>
+&gt;	<a href="http://chitanka.info/text/11207">По избор на клиента</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:11199}
+
+&gt;	{text:11200}
+
+&gt;	{text:11201}
+
+&gt;	{text:11202}
+
+&gt;	{text:11203}
+
+&gt;	{text:11204}
+
+&gt;	{text:11205}
+
+&gt;	{text:11206}
+
+&gt;	{text:11207}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Златните буболечки, SF Трилър 31
+	ИГ „Неохрон“ и ИК „Орфия“, 1999
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-1" title="Добавяне на 1 текста">1</span> Не от този свят</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/163">Читанка</a>, <a href="http://chitanka.info/admin/book/163/edit">Админ</a>, <a href="http://sfbg.us/book/NHRN-SFT-0014">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * На земята е прекален скучно – Филип Дик – стр.3
+    * Спиране на сърцето – Джордж Ефингер – стр.33
+    * Вашият приятел, Джек Изкормвача – Робърт Блох – стр.105
+    * Пътеките на желанията – Урсула Ле Гуин – стр.129
+-&gt;  * Енциклопедия на световната фантастика — част V – стр.173</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1362">На Земята е прекалено скучно</a>
+&gt;	<a href="http://chitanka.info/text/1033">Спиране на сърцето</a>
+&gt;	<a href="http://chitanka.info/text/1393">Вашият приятел, Джек Изкормвача</a>
+&gt;	<a href="http://chitanka.info/text/1664">Пътеките на желанията</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1362}
+
+&gt;	{text:1033}
+
+&gt;	{text:1393}
+
+&gt;	{text:1664}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	[[http://bgf.zavinagi.org/index.php/Поредица_SF_трилър|Не от този свят (Мистична фантастика)]]. 1993. Изд. Неохрон, Пловдив. SF Трилър, №14.  Съставители: Николай Странски, Иво Христов.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Р" title="Разбиване на произведения">Р</span> Конгрес по футурология — Станислав Лем</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/296">Читанка</a>, <a href="http://chitanka.info/admin/book/296/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0009">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Съдържание
+
+    * Конгрес по футурология – стр.7
+    * За душата – стр.133
+    * Клиниката на доктор Влипердиус – стр.147
+    * Професор А. Донда – стр.158
+    * Примката на времето – стр.195
+    * Да спасим космоса (отворено писмо на Ийон Тихи) – стр.208
+    * Любов и коварство – Светослав Николов (послеслов) – стр.220
+
+(в текст #15446 са набутани всички произведения от сборника)</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/15446">Конгрес по футурология</a>
+&gt;	<a href="http://chitanka.info/text/15447">Любов и коварство</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:15446}
+
+&gt;	{text:15447}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-1" title="Добавяне на 1 текста">1</span> Вой</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/321">Читанка</a>, <a href="http://chitanka.info/admin/book/321/edit">Админ</a>, <a href="http://sfbg.us/book/POLS-SCF-003X">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Мухата и паякът – Серж Брусоло – стр.5
+    * Безконечното самоубийство – Емануел Жуан – стр.27
+    * Като птица – Жан-Даниел Брек – стр.45
+    * Вой – Ришар Канал – стр.58
+    * Тайнствените какавиди – Жак Барбери – стр.78
+    * Елате в моя дворец – Жан-Клод Дюноак – стр.103
+    * Витален сън – Серж Льоман – стр.137
+-&gt;  * Няколко думи за авторите – Любомир Найденов – стр.181</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/2144">Мухата и паякът</a>
+&gt;	<a href="http://chitanka.info/text/2145">Безконечното самоубийство</a>
+&gt;	<a href="http://chitanka.info/text/2146">Като птица</a>
+&gt;	<a href="http://chitanka.info/text/2147">Вой</a>
+&gt;	<a href="http://chitanka.info/text/2148">Тайнствените какавиди</a>
+&gt;	<a href="http://chitanka.info/text/2149">Елате в моя дворец</a>
+&gt;	<a href="http://chitanka.info/text/2150">Витален сън</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:2144}
+
+&gt;	{text:2145}
+
+&gt;	{text:2146}
+
+&gt;	{text:2147}
+
+&gt;	{text:2148}
+
+&gt;	{text:2149}
+
+&gt;	{text:2150}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Вой. Френски фантастични разкази
+	Най-доброто от новата френска вълна
+	Издателство „Полюси“ 1993
+	Съставител и преводач: Любомир Найденов
+
+	Преводачът и издателите благодарят на:
+	г-н Пиер-Жан Бруйо, президент на Френската асоциация за научна фантастика;
+	г-н Ришар Комбало, критик и съставител;
+	както и на всички представени автори, за любезното съдействие и участие в настоящия сборник.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-2" title="Добавяне на 2 текста">2</span> Когато времето полудя</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/322">Читанка</a>, <a href="http://chitanka.info/admin/book/322/edit">Админ</a>, <a href="http://sfbg.us/book/NHRN-SFT-0002">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Когато времето полудя – Дърк Уили, Фредерик Арнолд Камери-Младши – стр.3
+    * Аристотел и оръжието – Л. Спрег де Камп – стр.81
+    * Бъдеще предварително – Рей Бредбъри – стр.127
+    * Времето не е пари – Крис Никълс – стр.147
+-&gt;  * Информация за авторите – стр.157
+-&gt;  * Книги на тема „тайм-фантастика“ – стр.158</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/174">Когато времето полудя</a>
+&gt;	<a href="http://chitanka.info/text/532">Аристотел и оръжието</a>
+&gt;	<a href="http://chitanka.info/text/1389">Бъдеще предварително</a>
+&gt;	<a href="http://chitanka.info/text/523">Времето не е пари</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:174}
+
+&gt;	{text:532}
+
+&gt;	{text:1389}
+
+&gt;	{text:523}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://bezmonitor.com
+
+	__Издание:__
+	[[http://bgf.zavinagi.org/index.php/Поредица_SF_трилър|Когато времето полудя. Тайм фантастика]]
+	Издателство „Неохрон-Универс“, Пловдив, 1992
+	SF Трилър №2. Ежемесечен алманах за остросюжетна литература
+	Редактор-съставители: Николай Странски, Иво Христов, Иван Минков
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-1" title="Добавяне на 1 текста">1</span> Последна игра</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/325">Читанка</a>, <a href="http://chitanka.info/admin/book/325/edit">Админ</a>, <a href="http://sfbg.us/book/NHRN-SFT-0010">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Оръжието-мутант – Мъри Лейнстър – стр.3
+    * Последната игра – Джо Холдеман – стр.71
+    * Така любовта ни предава понякога – Филис Макленън – стр.119
+    * Да бъдеш страхливец – Пол Андерсън – стр.141
+х   * Издателски съобщения – стр.169
+-&gt;  * Енциклопедия на световната фантастика — част II – стр.171</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1346">Оръжието-мутант</a>
+&gt;	<a href="http://chitanka.info/text/3107">Последната игра</a>
+&gt;	<a href="http://chitanka.info/text/1364">Така любовта ни предава понякога</a>
+&gt;	<a href="http://chitanka.info/text/684">Да бъдеш страхливец</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1346}
+
+&gt;	{text:3107}
+
+&gt;	{text:1364}
+
+&gt;	{text:684}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	[[http://bgf.zavinagi.org/index.php/Поредица_SF_трилър|Последна игра. Космическа фантастика]]
+	SF Трилър № 10
+	Редактор съставители: Иво Христов, Николай Странски
+	Превод: Иван Минков, Красномир Крачунов
+	Издателство „Неохрон“, издателство „Хермес“, Пловдив, 1993
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-4" title="Добавяне на 4 текста">4</span> Азазел — Айзък Азимов</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/327">Читанка</a>, <a href="http://chitanka.info/admin/book/327/edit">Админ</a>, <a href="http://sfbg.us/book/KNTG-S-93AAAZ">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Предговор (предговор) (прев. Мая Савова) – стр.5
+    * Двусантиметровото дяволче (прев. Мая Савова) – стр.8
+    * Една песенна нощ (прев. Мая Савова) – стр.18
+    * Усмивката, която погубва (прев. Мая Савова) – стр.25
+    * На победителя (прев. Мая Савова) – стр.35
+    * Неясното гъргорене (прев. Мая Савова) – стр.44
+-&gt;  * За спасение на човечеството (прев. Мая Савова) – стр.56
+    * Въпрос на принципи (прев. Мая Савова) – стр.68
+    * Вредното питие (прев. Мая Савова) – стр.82
+    * Време за писане (прев. Мая Савова) – стр.93
+    * Препускане в снега (прев. Радост Ванева) – стр.87
+    * Логиката си е логика (прев. Радост Ванева) – стр.125
+    * Той пътува най-бързо (прев. Радост Ванева) – стр.136
+    * Въпрос на вкус (прев. Радост Ванева) – стр.147
+-&gt;  * Повече неща на земята (прев. Радост Ванева) – стр.160
+    * Устройството на ума (прев. Радост Ванева) – стр.172
+-&gt;  * Битките на пролетта (прев. Радост Ванева) – стр.185
+    * Галатея (прев. Радост Ванева) – стр.199
+    * Полетът на фантазията (прев. Радост Ванева) – стр.212
+-&gt;  * За автора (прев. Радост Ванева) – стр.229
+
+(липсват)</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/2077">Предговор (Азазел)</a>
+&gt;	<a href="http://chitanka.info/text/2078">Двусантиметровото дяволче</a>
+&gt;	<a href="http://chitanka.info/text/2079">Една песенна нощ</a>
+&gt;	<a href="http://chitanka.info/text/2080">Усмивката, която погубва</a>
+&gt;	<a href="http://chitanka.info/text/2081">На победителя</a>
+&gt;	<a href="http://chitanka.info/text/2082">Неясното гъргорене</a>
+&gt;	<a href="http://chitanka.info/text/2083">Въпрос на принципи</a>
+&gt;	<a href="http://chitanka.info/text/2084">Вредното питие</a>
+&gt;	<a href="http://chitanka.info/text/254">Време за писане</a>
+&gt;	<a href="http://chitanka.info/text/255">Препускане в снега</a>
+&gt;	<a href="http://chitanka.info/text/258">Логиката си е логика</a>
+&gt;	<a href="http://chitanka.info/text/259">Той пътува най-бързо</a>
+&gt;	<a href="http://chitanka.info/text/260">Въпрос на вкус</a>
+&gt;	<a href="http://chitanka.info/text/267">Устройството на ума</a>
+&gt;	<a href="http://chitanka.info/text/263">Галатея</a>
+&gt;	<a href="http://chitanka.info/text/266">Полетът на фантазията</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:2077}
+
+&gt;	{text:2078}
+
+&gt;	{text:2079}
+
+&gt;	{text:2080}
+
+&gt;	{text:2081}
+
+&gt;	{text:2082}
+
+&gt;	{text:2083}
+
+&gt;	{text:2084}
+
+&gt;	{text:254}
+
+&gt;	{text:255}
+
+&gt;	{text:258}
+
+&gt;	{text:259}
+
+&gt;	{text:260}
+
+&gt;	{text:267}
+
+&gt;	{text:263}
+
+&gt;	{text:266}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Айзък Азимов. Азазел. Издателство „Книжен тигър“, 1993 г.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-2" title="Добавяне на 2 текста">2</span> Ангели пазители — Николай Теллалов</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/387">Читанка</a>, <a href="http://chitanka.info/admin/book/387/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-NBF-0034">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Сенки от прелитащи ангели – Атанас П. Славов (предговор) – стр.6
+    * Ангели пазители – стр.9
+    * Гривната – стр.134
+    * Контакт – стр.170
+    * Войната на боговете – стр.178
+    * Всичко коз! – стр.184
+    * Щастливият шанс – стр.192
+    * Страшен съд за всеки – стр.196
+    * Последен ден в неведение – стр.233
+-&gt;  * Разумът трябва да се доказва всяка секунда – Дилян Благов (интервю) – стр.250
+
+(липсват)</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/16641">Ангели пазители</a>
+&gt;	<a href="http://chitanka.info/text/17185">Гривната</a>
+&gt;	<a href="http://chitanka.info/text/17186">Контакт</a>
+&gt;	<a href="http://chitanka.info/text/7948">Войната на боговете</a>
+&gt;	<a href="http://chitanka.info/text/634">Всичко коз!</a>
+&gt;	<a href="http://chitanka.info/text/14727">Щастливият шанс</a>
+&gt;	<a href="http://chitanka.info/text/17187">Страшен съд за всеки</a>
+&gt;	<a href="http://chitanka.info/text/17184">Последен ден в неведение</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:16641}
+
+&gt;	{text:17185}
+
+&gt;	{text:17186}
+
+&gt;	{text:7948}
+
+&gt;	{text:634}
+
+&gt;	{text:14727}
+
+&gt;	{text:17187}
+
+&gt;	{text:17184}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-1" title="Добавяне на 1 текста">1</span> Злото идва!</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/388">Читанка</a>, <a href="http://chitanka.info/admin/book/388/edit">Админ</a>, <a href="http://sfbg.us/book/NHRN-SFT-0022">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Око за око – Орсън Скот Кард – стр.3
+    * Борба за кръв – Уолтър Милър-Младши – стр.69
+    * Знакът на вълка – Фред Саберхаген – стр.141
+    * Черният хищник – А. Е. Ван Вогт – стр.154
+    * Среща със злото в Ланхмар – Фриц Лейбър – стр.218
+    * Времето не е пари – Крис Никълс – стр.306
+-&gt;  * Информация за авторите – стр.316
+х   * Издателски съобщения – стр.317</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1350">Око за око</a>
+&gt;	<a href="http://chitanka.info/text/17189">Борба за кръв</a>
+&gt;	<a href="http://chitanka.info/text/17190">Знакът на вълка</a>
+&gt;	<a href="http://chitanka.info/text/961">Черният хищник</a>
+&gt;	<a href="http://chitanka.info/text/17191">Среща със злото в Ланхмар</a>
+&gt;	<a href="http://chitanka.info/text/523">Времето не е пари</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1350}
+
+&gt;	{text:17189}
+
+&gt;	{text:17190}
+
+&gt;	{text:961}
+
+&gt;	{text:17191}
+
+&gt;	{text:523}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Злото идва! SF Трилър 22
+	Най-доброто от SF трилър 1–6
+	ИГ „Неохрон“ и ИК „Орфия“, 1998
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Н" title="Друга задача">Н</span> Странното затруднение</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/448">Читанка</a>, <a href="http://chitanka.info/admin/book/448/edit">Админ</a>, <a href="http://sfbg.us/book/NHRN-SFT-0025">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Всичко в златния следобед – Робърт Блох – стр.3
+    * Молох от Белморал – Боб Фишер – стр.40
+    * Деликатно затруднение – Брайън Олдис – стр.127
+??? * Странният живот на Джон Кингман – Мъри Лейнстър – стр.170
+
+(друг превод?)</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/725">Всичко в златния следобед</a>
+&gt;	<a href="http://chitanka.info/text/111">Молох от Белморал</a>
+&gt;	<a href="http://chitanka.info/text/116">Деликатно затруднение</a>
+&gt;	<a href="http://chitanka.info/text/628">Странната история на Джон Кингман</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:725}
+
+&gt;	{text:111}
+
+&gt;	{text:116}
+
+&gt;	{text:628}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	[[http://bgf.zavinagi.org/index.php/Поредица_SF_трилър|Странното затруднение (сънища и фантастика)]]
+	Изд. Неохрон, Пловдив, 1994
+	SF Трилър №25
+	Превод и съставителство: Сийка Петрова, Красномир Крачунов, Ц. Съмънлиев
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-1" title="Добавяне на 1 текста">1</span> Двама са много</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/449">Читанка</a>, <a href="http://chitanka.info/admin/book/449/edit">Админ</a>, <a href="http://sfbg.us/book/NHRN-SFT-0015">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Двама са много – Деймън Найт – стр.3
+    * Механическото его – Хенри Катнър – стр.47
+    * Какво щастие е да си блобъл – Филип Дик – стр.113
+    * Господарят на хилядите слънца – Пол Андерсън – стр.141
+-&gt;  * Енциклопедия на световната фантастика — част VII – стр.185
+
+(липсва)</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/151">Двама са много</a>
+&gt;	<a href="http://chitanka.info/text/1052">Механическото его</a>
+&gt;	<a href="http://chitanka.info/text/1357">Какво щастие е да си блобъл</a>
+&gt;	<a href="http://chitanka.info/text/686">Господарят на хилядите слънца</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:151}
+
+&gt;	{text:1052}
+
+&gt;	{text:1357}
+
+&gt;	{text:686}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	[[http://bgf.zavinagi.org/index.php/Поредица_SF_трилър|Двама са много (психологическа фантастика)]]
+	Изд. Неохрон, Пловдив, 1993
+	SF Трилър №15
+	Съставител: Николай Странски, Иво Христов
+	Превод: Красномир Крачунов, Ивайло Рунев
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-1" title="Добавяне на 1 текста">1</span> Двуръката машина</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/451">Читанка</a>, <a href="http://chitanka.info/admin/book/451/edit">Админ</a>, <a href="http://sfbg.us/book/NHRN-SFT-0024">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Търговци на роби в космоса – Джон Бранър – стр.3
+    * Ел Стоу – Ерик Ф. Ръсел – стр.134
+    * Двуръката машина – Х. Катнер, К. Мур – стр.156
+-&gt;  * ЕВРОКОН 94 – стр.191</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/445">Търговци на роби в космоса</a>
+&gt;	<a href="http://chitanka.info/text/225">Ел Стоу</a>
+&gt;	<a href="http://chitanka.info/text/1053">Двуръката машина</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:445}
+
+&gt;	{text:225}
+
+&gt;	{text:1053}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	[[http://bgf.zavinagi.org/index.php/Поредица_SF_трилър|Двуръката машина (роботи и фантастика)]]
+	Изд. Неохрон, Пловдив, 1994
+	SF Трилър №24
+	Превод, съставител: Весела Петрова, Красномир Крачунов
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Венериански търговци</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/452">Читанка</a>, <a href="http://chitanka.info/admin/book/452/edit">Админ</a>, <a href="http://sfbg.us/book/ORFA-FAN-015S">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * В България за вдъхновение? – Юлиян Стойнов (предговор) – стр.5
+    * Златото в края на звездната дъга [The Gold at the Starbow’s End] (прев. Юлиян Стойнов) – стр.7
+    * Венериански търговци [The Merchants of Venus] (прев. Емануел Икономов) – стр.78</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&lt;!--В България за вдъхновение, Юлиян СТОЙНОВ--&gt;
+&gt;	<a href="http://chitanka.info/text/264">Златото в края на звездната дъга</a>
+&gt;	<a href="http://chitanka.info/text/275">Венериански търговци</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	&lt;!--В България за вдъхновение, Юлиян СТОЙНОВ--&gt;
+&gt;	{text:264}
+
+&gt;	{text:275}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Венериански търговци
+	Изд. Орфия, София, 1992
+	Биб. Фантастика №15
+	Художник: Димитър Янков
+	Печат: Военноиздателски комплекс „Св. Георги Победоносец“, София
+	Формат: 70×100/32. Печатни коли: 11. Офс. изд. Тираж: 20 200 бр. Страници: 175. Цена: 12.00 лв.
+	ISBN: 954-444-018-6
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-1" title="Добавяне на 1 текста">1</span> Лица и маски</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/453">Читанка</a>, <a href="http://chitanka.info/admin/book/453/edit">Админ</a>, <a href="http://sfbg.us/book/NHRN-SFT-0009">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Всекидневна работа – Ерик Франк Ръсел – стр.3
+    * Лунният молец – Джек Ванс – стр.69
+    * Време за развлечения – Фриц Лейбър – стр.123
+    * Колонията – Филип Дик – стр.141
+х   * Издателски съобщения – стр.167
+-&gt;  * Енциклопедия на световната фантастика — част I – стр.169</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1012">Всекидневна работа</a>
+&gt;	<a href="http://chitanka.info/text/1201">Лунният молец</a>
+&gt;	<a href="http://chitanka.info/text/281">Време за развлечения</a>
+&gt;	<a href="http://chitanka.info/text/1356">Колонията</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1012}
+
+&gt;	{text:1201}
+
+&gt;	{text:281}
+
+&gt;	{text:1356}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	[[http://bgf.zavinagi.org/index.php/Поредица_SF_трилър|Лица и маски (американска фантастика)]]
+	Изд. Неохрон, Пловдив и Изд. Хермес, Пловдив, 1993
+	SF Трилър №9
+	Редактор, съставител: Иво Христов, Николай Странски
+	Превод: Красномир Крачунов
+	Формат: 115×165. Страници: 172. Цена: 9.95 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-1" title="Добавяне на 1 текста">1</span> Сребърният коридор</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/455">Читанка</a>, <a href="http://chitanka.info/admin/book/455/edit">Админ</a>, <a href="http://sfbg.us/book/NHRN-SFT-0018">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Сребърният коридор – Харлън Елисън – стр.3
+    * Маскировката – Хенри Катнър – стр.30
+    * Войникът – Гордън Диксън – стр.79
+    * Преследването – Кодзи Танака – стр.105
+    * Скитник из космоса – Робърт Силвърбърг – стр.130
+-&gt;  * Енциклопедия на световната фантастика — част 9 – стр.189</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1045">Сребърният коридор</a>
+&gt;	<a href="http://chitanka.info/text/1047">Маскировката</a>
+&gt;	<a href="http://chitanka.info/text/305">Войникът</a>
+&gt;	<a href="http://chitanka.info/text/511">Преследването</a>
+&gt;	<a href="http://chitanka.info/text/758">Скитник из космоса</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1045}
+
+&gt;	{text:1047}
+
+&gt;	{text:305}
+
+&gt;	{text:511}
+
+&gt;	{text:758}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	[[http://bgf.zavinagi.org/index.php/Поредица_SF_трилър|Сребърният коридор (ментална фантастика)]]
+	Изд. Неохрон, Пловдив, 1994
+	SF Трилър №18
+	Редактори, съставители: Красномир Крачунов, Иво Христов
+	Превод: Красномир Крачунов
+	Формат: 120×165
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-1" title="Добавяне на 1 текста">1</span> От драконите до компютрите</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/457">Читанка</a>, <a href="http://chitanka.info/admin/book/457/edit">Админ</a>, <a href="http://sfbg.us/book/NHRN-SFT-0013">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Отрядът на изследователите – Мъри Лейнстър – стр.3
+    * Господарите на драконите – Джак Ванс – стр.60
+    * Нямам уста за да викам – Харлан Елисън – стр.166
+-&gt;  * Енциклопедия на световната фантастика — част V – стр.187</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1347">Изследователският отряд</a>
+&gt;	<a href="http://chitanka.info/text/421">Господарите на Драконите</a>
+&gt;	<a href="http://chitanka.info/text/322">Нямам уста, че да викам</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1347}
+
+&gt;	{text:421}
+
+&gt;	{text:322}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	[[http://bgf.zavinagi.org/index.php/Поредица_SF_трилър|От драконите до компютрите]]
+	Изд. Неохрон, Пловдив и Изд. Хермес, Пловдив, 1993
+	SF Трилър №13
+	Ред.-съставители: Красномир Крачунов, Иво Христов, Н. Странски
+	Формат: 115×165. Страници: 192. Цена: 13.00 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Дебнещият страх</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/458">Читанка</a>, <a href="http://chitanka.info/admin/book/458/edit">Админ</a>, <a href="http://sfbg.us/book/ORFA-FAN-005S">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Ужас на малки глътки – Любомир Николов (предговор) – стр.5
+    * Цветът от Космоса – стр.7
+    * Безименният град – стр.47
+    * Сянка над Инсмут – стр.65</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/360">Цветът от Космоса</a>
+&gt;	<a href="http://chitanka.info/text/359">Безименният град</a>
+&gt;	<a href="http://chitanka.info/text/362">Сянка над Инсмут</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:360}
+
+&gt;	{text:359}
+
+&gt;	{text:362}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Дебнещият страх: Фантастика на ужаса
+	Изд. Орфия, София, 1991
+	Биб. Фантастика №5. Сборник разкази
+	Превод: [от англ.] Любомир Николов
+	Съставител: Любомир Николов
+	Предговор: Ужас на малки глътки, Любомир Николов
+	Художник: Джим Барнс (корица)
+	Формат: 70×100/32. Печатни коли: 10. Тираж: 30 000 бр. Страници: 160. Цена: 7.00 лв.
+	ISBN: 954-444-005-4
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-1" title="Добавяне на 1 текста">1</span> Контактът невъзможен</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/459">Читанка</a>, <a href="http://chitanka.info/admin/book/459/edit">Админ</a>, <a href="http://sfbg.us/book/NHRN-SFT-0006">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Черният хищник – Алфред Ван Вогт – стр.3
+-&gt;  * Този невъзможен свят – Клифърд Саймък – стр.67
+    * Тайните инструкции – Кейт Лаумър – стр.119
+    * Лабиринт – Крис Никълс – стр.143
+х   * Издателски съобщения – стр.156</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/961">Черният хищник</a>
+
+&lt;!--Този невъзможен свят, Клифърд САЙМЪК — с.67;--&gt;
+&gt;	<a href="http://chitanka.info/text/500">Тайните инструкции</a>
+&gt;	<a href="http://chitanka.info/text/522">Лабиринт</a>
+
+&lt;!--Сблъсък с чуждия разум [послеслов] — с.156;--&gt;
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:961}
+
+	&lt;!--Този невъзможен свят, Клифърд САЙМЪК — с.67;--&gt;
+&gt;	{text:500}
+
+&gt;	{text:522}
+
+	&lt;!--Сблъсък с чуждия разум [послеслов] — с.156;--&gt;
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	[[http://bgf.zavinagi.org/index.php/Поредица_SF_трилър|Контактът невъзможен. Сблъсък с чуждия разум]]
+	Изд. Неохрон, Пловдив / Изд. Хермес, Пловдив, 1992
+	SF Трилър №6. Ежемесечен алманах за остросюжетна литература.
+	Ред.-съставители: Иво Христов, Николай Странски
+	Превод: Красномир Крачунов
+	Печат: „Полиграфия“ АД, Пловдив
+	Формат: 120×165. Страници: 160. Цена: 9.50 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-1" title="Добавяне на 1 текста">1</span> Гибел идва с „Клон“</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/464">Читанка</a>, <a href="http://chitanka.info/admin/book/464/edit">Админ</a>, <a href="http://sfbg.us/book/NHRN-SFT-0011">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Клон – Теодор Л. Томас, Кейт Уилхелм – стр.3
+    * И се чу глас – Ерик Франк Ръсел – стр.117
+    * Калейдоскоп – Рей Бредбъри – стр.171
+х   * Издателски съобщения – стр.182
+-&gt;  * Енциклопедия на световната фантастика — част III – стр.187</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1655">Клон</a>
+&gt;	<a href="http://chitanka.info/text/1013">И се чу глас</a>
+&gt;	<a href="http://chitanka.info/text/1376">Калейдоскоп</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1655}
+
+&gt;	{text:1013}
+
+&gt;	{text:1376}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	[[http://bgf.zavinagi.org/index.php/Поредица_SF_трилър|Гибел идва с „клон“ (катастрофическа фантастика)]]
+	Изд. Неохрон, Пловдив и Изд. Хермес, Пловдив, 1993
+	SF Трилър №11
+	Редактор, съставител: Николай Странски, Иво Христов
+	Превод: Христина Минкова
+	Формат: 115×165. Страници: 192.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-1" title="Добавяне на 1 текста">1</span> Петият закон — Никола Кесаровски</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/471">Читанка</a>, <a href="http://chitanka.info/admin/book/471/edit">Админ</a>, <a href="http://sfbg.us/book/OTCH-FAN-83PZ">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1102">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * В началото на пътя – Агоп Мелконян (предговор) – стр.5
+    * Алена капка кръв – стр.7
+    * Абсолютната хармония – стр.27
+    * Петият закон на роботиката – стр.76
+-&gt;  * Бунтът – стр.130</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1889">В началото на пътя</a>
+&gt;	<a href="http://chitanka.info/text/1890">Алена капка кръв</a>
+&gt;	<a href="http://chitanka.info/text/1891">Абсолютната хармония</a>
+&gt;	<a href="http://chitanka.info/text/1892">Петият закон на роботиката</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1889}
+
+&gt;	{text:1890}
+
+&gt;	{text:1891}
+
+&gt;	{text:1892}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Никола Кесаровски. Петият закон. Фантастични разкази и новели
+	Първо издание
+	Биб. Фантастика №25.
+	Рецензенти: Любен Дилов, Агоп Мелконян
+	Редактор: Елена Коларова
+	Художествен редактор: Борис Бранков
+	Технически редактор: Петър Балавесов
+	Коректор: Асен Баръмов
+	Художник: Христо БРАЙКОВ
+	Българска. Изд. № 882.
+	Формат: 70×100/32. Печатни коли: 11. Тираж: 40 115. Страници: 178. Цена: 0,53 лв.
+	Държавно издателство „Отечество“, София, 1983
+	Печат: ДП „Димитър Найденов“, Велико Търново.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-11" title="Добавяне на 11 текста">11</span> Космически комедии — Итало Калвино</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/478">Читанка</a>, <a href="http://chitanka.info/admin/book/478/edit">Админ</a>, <a href="http://sfbg.us/book/HRGD-PRL-76KK">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=2448">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Итало Калвино и неговите космически комедии – Божан Христов (предговор) – стр.7
+-&gt;  * Разстоянието до Луната – стр.11
+-&gt;  * На зазоряване – стр.25
+-&gt;  * Знак в пространството – стр.35
+    * Всичко в една точка – стр.44
+-&gt;  * Без цветове – стр.49
+-&gt;  * Безкрайни игри – стр.59
+-&gt;  * Вуйчото от лагуната – стр.65
+-&gt;  * Да се обзаложим – стр.76
+    * Динозаврите – стр.85
+-&gt;  * Формата на пространството – стр.100
+-&gt;#10564    * Светлинните години – стр.107
+-&gt;  * Спиралата – стр.117
+
+(липсват)</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&lt;!--Предговор: Итало Калвино и неговите космически комедии, Божан Христов — с.7–9.--&gt;
+&lt;!--Разстоянието до Луната — с. 11,--&gt;
+&lt;!--На зазоряване — с. 25,--&gt;
+&lt;!--Знак в пространството — с. 35,--&gt;
+&gt;	<a href="http://chitanka.info/text/383">Всичко в една точка</a>
+
+&lt;!--Без цветове — с. 49,--&gt;
+&lt;!--Безкрайни игри — с. 59,--&gt;
+&lt;!--Вуйчото на лагуната — с. 65,--&gt;
+&lt;!--Да се обзаложим — с. 76,--&gt;
+&gt;	<a href="http://chitanka.info/text/382">Динозаврите</a>
+
+&lt;!--Формата на пространствто — с. 100,--&gt;
+&lt;!--Светлинните години — с. 107,--&gt;
+&lt;!--Спиралата — с. 117.--&gt;
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	&lt;!--Предговор: Итало Калвино и неговите космически комедии, Божан Христов — с.7–9.--&gt;
+	&lt;!--Разстоянието до Луната — с. 11,--&gt;
+	&lt;!--На зазоряване — с. 25,--&gt;
+	&lt;!--Знак в пространството — с. 35,--&gt;
+&gt;	{text:383}
+
+	&lt;!--Без цветове — с. 49,--&gt;
+	&lt;!--Безкрайни игри — с. 59,--&gt;
+	&lt;!--Вуйчото на лагуната — с. 65,--&gt;
+	&lt;!--Да се обзаложим — с. 76,--&gt;
+&gt;	{text:382}
+
+	&lt;!--Формата на пространствто — с. 100,--&gt;
+	&lt;!--Светлинните години — с. 107,--&gt;
+	&lt;!--Спиралата — с. 117.--&gt;
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Итало Калвино. Космически комедии. Сборник новели
+	Издателство „Христо Г. Данов“, Пловдив, 1976
+	Превод: Божан Христов
+	Художник: Христо Брайков
+	Печат: Печатница „Димитър Благоев“, Пловдив.
+	Формат: 84х108/32. Печатни коли: 8.25. С подвързия.
+	Страници: 132. Цена: 0.67 лв.
+
+	Italo Calvino. Le cosmicomiche. 1965
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Н" title="Друга задача">Н</span> Шпага с рубини — Светослав Славчев</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/481">Читанка</a>, <a href="http://chitanka.info/admin/book/481/edit">Админ</a>, <a href="http://sfbg.us/book/OTCH-FAN-88SR">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1128">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Книгата трябва да е „Шпага с рубини“, а не „Шпага с рубин“</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/842">Шпага с рубини</a>
+&gt;	<a href="http://chitanka.info/text/841">Няма път за „Херкулан“</a>
+
+&lt;!--Послеслов, Васил Райков — с.215–218--&gt;
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:842}
+
+&gt;	{text:841}
+
+	&lt;!--Послеслов, Васил Райков — с.215–218--&gt;
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Светослав Славчев. Шпага с рубини. Сборник научнофантастични повести
+	Изд. Отечество, 1988
+	Биб. Фантастика №51
+	Художник: Петър Станимиров
+	Печат: ДП Георги Димитров, София
+	Формат: 70×100/32. Печатни коли: 17. Страници: 222. Цена: 1.62 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Невромантик — Уилям Гибсън</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/482">Читанка</a>, <a href="http://chitanka.info/admin/book/482/edit">Админ</a>, <a href="http://sfbg.us/book/KAME-BFN-013X">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Невромантик – Уилям Гибсън – стр.5
+-&gt;  * Послеслов на преводача – Григор Гачев (послеслов) – стр.250
+    * Мнемоничния Джони – стр.254
+    * Изгарянето на Хрома – стр.273</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1676">Невромантик</a>
+&gt;	<a href="http://chitanka.info/text/910">Мнемоничният Джони</a>
+&gt;	<a href="http://chitanka.info/text/1679">Изгарянето на Хрома</a>
+
+&lt;!--Послеслов на преводача (към «Невромантик»), Григор ГАЧЕВ — с.250–252--&gt;
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1676}
+
+&gt;	{text:910}
+
+&gt;	{text:1679}
+
+	&lt;!--Послеслов на преводача (към «Невромантик»), Григор ГАЧЕВ — с.250–252--&gt;
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Уилям Гибсън. Невромантик
+	Изд. Камея, София, 1996
+	Биб. Фантастика №13
+	Художник: Иван Крумов
+	Печат: Полипринт, Враца
+	Формат: 84×108/32. Печатни коли: 18.5. Страници: 296. Цена: 390.00 лв
+	ISBN: 954-8340-08-9
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Н" title="Друга задача">Н</span> Конан — Робърт Хауърд</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/548">Читанка</a>, <a href="http://chitanka.info/admin/book/548/edit">Админ</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Нямам информация за такова издание; вероятно е планирана, но неиздадена.</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1775">Предговор от преводача</a>
+&gt;	<a href="http://chitanka.info/text/1396">Предисловие</a>
+&gt;	<a href="http://chitanka.info/text/1397">Писмо на Р. Хауърд до П. Милър</a>
+&gt;	<a href="http://chitanka.info/text/1403">Хайборейската епоха, част 1</a>
+&gt;	<a href="http://chitanka.info/text/1404">Нещото в гробницата</a>
+&gt;	<a href="http://chitanka.info/text/1405">Кулата на слона</a>
+&gt;	<a href="http://chitanka.info/text/1401">Залата на мъртъвците</a>
+&gt;	<a href="http://chitanka.info/text/1400">Богът в купата</a>
+&gt;	<a href="http://chitanka.info/text/1398">Мошеници в дома</a>
+&gt;	<a href="http://chitanka.info/text/1402">Ръката на Нергал</a>
+&gt;	<a href="http://chitanka.info/text/1399">Градът на черепите</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1775}
+
+&gt;	{text:1396}
+
+&gt;	{text:1397}
+
+&gt;	{text:1403}
+
+&gt;	{text:1404}
+
+&gt;	{text:1405}
+
+&gt;	{text:1401}
+
+&gt;	{text:1400}
+
+&gt;	{text:1398}
+
+&gt;	{text:1402}
+
+&gt;	{text:1399}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Н" title="Друга задача">Н</span> Конан Бандита — Робърт Хауърд</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/581">Читанка</a>, <a href="http://chitanka.info/admin/book/581/edit">Админ</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Съдържанието не съответства на корицата
+http://www.sfbg.us/book/PLEJ-EKS-RHRV</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1406">Черният колос</a>
+&gt;	<a href="http://chitanka.info/text/1407">Сенки под лунната светлина</a>
+&gt;	<a href="http://chitanka.info/text/3055">… и се роди вещица</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1406}
+
+&gt;	{text:1407}
+
+&gt;	{text:3055}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Н" title="Друга задача">Н</span> Конан Приключенеца — Робърт Хауърд</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/582">Читанка</a>, <a href="http://chitanka.info/admin/book/582/edit">Админ</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Няма такава книга.</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1394">Там, където се крие Черния</a>
+&gt;	<a href="http://chitanka.info/text/1395">Плъзгащата се сянка</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1394}
+
+&gt;	{text:1395}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Н" title="Друга задача">Н</span> Конан Узурпатора — Робърт Хауърд</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/583">Читанка</a>, <a href="http://chitanka.info/admin/book/583/edit">Админ</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Съдържанието не съответства на корицата
+http://www.sfbg.us/book/PLEJ-EKS-RHAC</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1408">Феникс върху меча</a>
+&gt;	<a href="http://chitanka.info/text/3106">Алената цитадела</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1408}
+
+&gt;	{text:3106}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Н" title="Друга задача">Н</span> Смажи лагерите си с кръв — Клифърд Саймък</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/584">Читанка</a>, <a href="http://chitanka.info/admin/book/584/edit">Админ</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Няма такава книга.</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1755">Смажи лагерите си с кръв (предговор)</a>
+&gt;	<a href="http://chitanka.info/text/4970">Уютно гнезденце</a>
+&gt;	<a href="http://chitanka.info/text/4971">Дезертьори</a>
+&gt;	<a href="http://chitanka.info/text/988">Схватката</a>
+&gt;	<a href="http://chitanka.info/text/984">Лека нощ, мистър Джеймс</a>
+&gt;	<a href="http://chitanka.info/text/993">Бавачките</a>
+&gt;	<a href="http://chitanka.info/text/991">Големият преден двор</a>
+&gt;	<a href="http://chitanka.info/text/1686">Големият преден двор</a>
+&gt;	<a href="http://chitanka.info/text/977">Всички капани на Земята</a>
+&gt;	<a href="http://chitanka.info/text/994">Нещото в камъка</a>
+&gt;	<a href="http://chitanka.info/text/990">Есенна земя</a>
+&gt;	<a href="http://chitanka.info/text/976">Призракът на един модел „Т“</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1755}
+
+&gt;	{text:4970}
+
+&gt;	{text:4971}
+
+&gt;	{text:988}
+
+&gt;	{text:984}
+
+&gt;	{text:993}
+
+&gt;	{text:991}
+
+&gt;	{text:1686}
+
+&gt;	{text:977}
+
+&gt;	{text:994}
+
+&gt;	{text:990}
+
+&gt;	{text:976}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-1" title="Добавяне на 1 текста">1</span> Златен кан</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/629">Читанка</a>, <a href="http://chitanka.info/admin/book/629/edit">Админ</a>, <a href="http://sfbg.us/book/LING-ZLK-0902">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Прекрасната вечер, когато умрях – Геновева Димова – стр.9
+    * Извратеняк – Мартина Мартова – стр.31
+    * Приказка за ръкавица – Вероника Батхен – стр.39
+    * Рибеният мъж – Светослав Николов – стр.46
+    * Схватка край каменния поток – Серхио Гаут Вел Хартман – стр.70
+    * Празник – Ценка Бакърджиева – стр.82
+    * Клуб за бягство – Алексей Зайцев – стр.108
+    * Думата – Христо Пощаков – стр.128
+    * Пътища назад – Ивайло Иванов – стр.146
+    * Редакционния – Владимир Цветков – стр.167
+    * Наемникът – Антонио Белломи – стр.177
+-&gt;  * Златин и змеят – Бранимир Събев – стр.191</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/20274">Прекрасната вечер, когато умрях</a>
+&gt;	<a href="http://chitanka.info/text/20275">Извратеняк</a>
+&gt;	<a href="http://chitanka.info/text/20276">Приказка за ръкавица</a>
+&gt;	<a href="http://chitanka.info/text/20277">Рибеният мъж</a>
+&gt;	<a href="http://chitanka.info/text/20278">Схватка край каменния поток</a>
+&gt;	<a href="http://chitanka.info/text/20279">Празник</a>
+&gt;	<a href="http://chitanka.info/text/20280">Клуб за бягство</a>
+&gt;	<a href="http://chitanka.info/text/20281">Думата</a>
+&gt;	<a href="http://chitanka.info/text/20282">Пътища назад</a>
+&gt;	<a href="http://chitanka.info/text/20283">Редакционния</a>
+&gt;	<a href="http://chitanka.info/text/20284">Наемникът</a>
+&gt;	_Златин и змеят_ от Бранимир Събев
+	Не е включен в това електронно издание.
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:20274}
+
+&gt;	{text:20275}
+
+&gt;	{text:20276}
+
+&gt;	{text:20277}
+
+&gt;	{text:20278}
+
+&gt;	{text:20279}
+
+&gt;	{text:20280}
+
+&gt;	{text:20281}
+
+&gt;	{text:20282}
+
+&gt;	{text:20283}
+
+&gt;	{text:20284}
+
+&gt;	_Златин и змеят_ от Бранимир Събев
+	Не е включен в това електронно издание.
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Златен кан. Том 2
+	Съставител: Кънчо Кожухаров
+	Корично оформление: Веселин Праматаров
+	Лингея ЕООД, Благоевград
+	ISBN 978-954-92471-2-1
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Р" title="Разбиване на произведения">Р</span> Частен космос. Зад стените на Тера — Филип Хосе Фармър</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/640">Читанка</a>, <a href="http://chitanka.info/admin/book/640/edit">Админ</a>, <a href="http://sfbg.us/book/BARD-FCL-0003">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Въведението на Роджър Зелазни да се отдели от „Частен космос“.</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/662">Частен космос</a>
+&gt;	<a href="http://chitanka.info/text/663">Зад стените на Тера</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:662}
+
+&gt;	{text:663}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	Частен космос. Зад стените на Тера. 1994. Изд. Бард, София. Биб. Фентъзи клуб, No.3. Романи. Превод: [от англ.] Иван ЗЛАТАРСКИ [A Private Cosmos (1967), Behind the Walls of Terra (1970) / Philip Jose FARMER]. Предговор: Роджър ЗЕЛАЗНИ. Формат: 20 см. Страници: 400. Цена: 83.00 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-2" title="Добавяне на 2 текста">2</span> Корпорация „Безсмъртие“. Цивилизация на статуса — Робърт Шекли</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/645">Читанка</a>, <a href="http://chitanka.info/admin/book/645/edit">Админ</a>, <a href="http://sfbg.us/book/OTCH-SSF-92KC">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Иронията на фантаста – Миглена Николчина (предговор) – стр.5
+    * Корпорация „Безсмъртие“ [Immorality Inc.] – стр.7
+    * Цивилизация на статуса [The Status Civilization] – стр.125
+-&gt;  * Странното огледало на фантастиката – Светослав Славчев (послеслов) – стр.216</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/1416">Корпорация „Безсмъртие“</a>
+&gt;	<a href="http://chitanka.info/text/1418">Цивилизация на статуса</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:1416}
+
+&gt;	{text:1418}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://bezmonitor.com (през http://sfbg.us)
+
+	__Издание:__
+	Корпорация „Безсмъртие“. Цивилизация на статуса. 1992. Изд. Отечество, София. Биб. Съвременна световна фантастика. Научнофантастични романи. Превод: от англ. Любомир НИКОЛОВ [Immortality Inc. (1959); The Status Civilization (1960), Robert SHECKLEY]. Предговор: Иронията на фантаста, Миглена НИКОЛЧИНА — с.5–6. Художник: Васил МИОВСКИ. Печат: ДФ Балканпрес, София. Формат: 16/60/90. Печатни коли: 14. Офс. изд. Тираж: 10 067 бр. Страници: 224. Цена: 23.00 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-12" title="Добавяне на 12 текста">12</span> Пътят към звездите — Константин Циолковски</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/682">Читанка</a>, <a href="http://chitanka.info/admin/book/682/edit">Админ</a>, <a href="http://sfbg.us/book/NIIZ-S-71KCPZ">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Съдържание
+
+-&gt;  * За сборника от научно-фантастични произведения на К. Е. Циолковски – Акад. В. Г. Фесенков (предговор) – стр.5
+    * На Луната – стр.11
+    * Мечти за Земята и небето – стр.47
+    * На Веста – стр.135
+-&gt;  * Отвъд Земята – стр.140
+-&gt;  * Цели на звездоплаването – стр.140
+-&gt;  * Изменение на относителната тежест на Земята – стр.329
+-&gt;  * Живите същества в космоса – стр.352
+-&gt;  * Биология на джуджетата и великаните – стр.368
+-&gt;  * Ефирният остров – стр.374
+-&gt;  * Отвъд атмосферата на Земята – стр.385
+-&gt;  * Научната фантастика в трудовете на К. Е. Циолковски – Б. Н. Воробьов (послеслов) – стр.393
+    * Приложения
+-&gt;        o I. За изобретателите на реактивни машини – стр.409
+-&gt;        o II. Само фантазия ли е това? – стр.410
+-&gt;        o III. Странички от юношеската тетрадка – Съв.редакция – стр.412</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/15944">На Луната</a>
+&gt;	<a href="http://chitanka.info/text/15945">Мечти за Земята и небето</a>
+&gt;	<a href="http://chitanka.info/text/15946">На Веста</a>
+
+	----
+	Книгата е непълна.
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:15944}
+
+&gt;	{text:15945}
+
+&gt;	{text:15946}
+
+	----
+	Книгата е непълна.
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Константин Циолковски. Пътят към звездите
+	Издателство „Наука и изкуство“, София, 1971
+	Издательство Академии наук СССР, Москва, 1960
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-30" title="Добавяне на 30 текста">30</span> Светове</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/693">Читанка</a>, <a href="http://chitanka.info/admin/book/693/edit">Админ</a>, <a href="http://sfbg.us/book/OFIR-BFN-0004">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Съдържание
+
+    * I. Неутронната звезда
+          o Неутронната звезда – Лари Нивън (прев. Кънчо Кожухаров) – стр.7
+          o Странникът, който дойде рано сутринта – Пол Андерсън (прев. Никола Станчев) – стр.31
+          o Песен преди залеза – Дейвид Григ (прев. Христо Пощаков) – стр.66
+          o Мостът на Бетелгейзе – Уилям Тен (прев. Никола Станчев) – стр.80
+          o Щастлив завършек – Хенри Катнър (прев. Никола Станчев) – стр.106
+          o Наричай го „Господарю“ – Гордън Диксън (прев. Лили Николова, Марияна Янакиева) – стр.131
+          o Крилата на победата – Пол Андерсън (прев. Иван Иванов) – стр.156
+          o Мъненките котита на мама Хитън – Кордуейнър Смит (прев. Тинко Трифонов) – стр.178
+          o Юпитер пет – Артър Кларк (прев. Никола Станчев) – стр.207
+          o „О“ в Хосе – Брайън Олдис (прев. Тинко Трифонов) – стр.247
+          o Градината на времето – Джеймс Балард (прев. Тинко Трифонов) – стр.259
+-&gt;        o Търсене – Ли Хардинг (прев. Соня Бояджиева) – стр.269
+-&gt;  * II. Калиюга
+-&gt;        o Пещерата – Евгений Замятин (прев. Соня Бояджиева) – стр.297
+-&gt;        o Паметник – Павел Амнуел (прев. Соня Бояджиева) – стр.307
+-&gt;        o Калиюга – Василий Головачов (прев. Соня Бояджиева) – стр.317
+-&gt;        o Нощта на птичето мляко – Александър Силецки (прев. Соня Бояджиева) – стр.366
+-&gt;        o Чия е планетата – Борис Щерн (прев. Соня Бояджиева) – стр.381
+-&gt;        o Митническа проверка – Борис Щерн (прев. Соня Бояджиева) – стр.390
+-&gt;        o Животът е борба – Ян Мърлик (прев. Величко Панайотов) – стр.400
+-&gt;        o Влияние на хищните кокошки върху храносмилането на стомаха – Янчо Чолаков – стр.409
+-&gt;  * III. Спящият град
+-&gt;        o Кафеничето – Теофил Готие (прев. Станислава Васева) – стр.465
+-&gt;        o Прокълнатата ливрея – Октав Мирбо (прев. Никола Станчев) – стр.473
+-&gt;        o Власатата гривна – Александър Дюма (прев. Никола Станчев) – стр.482
+-&gt;        o Смъртният час – Абел Юго (прев. Никола Станчев) – стр.489
+-&gt;        o Магнолията – Реми дьо Гурмон (прев. Станислава Васева) – стр.495
+-&gt;        o Спящият град – Марсел Швоб (прев. Станислава Васева) – стр.499
+-&gt;  * IV. Сянката съдия
+-&gt;        o Девойката в зелено – Пу Сунлин (прев. Соня Бояджиева) – стр.507
+-&gt;        o Дун умря – Пу Сунлин (прев. Соня Бояджиева) – стр.509
+-&gt;        o Хецзянският студент – Пу Сунлин (прев. Соня Бояджиева) – стр.515
+-&gt;        o Търговецът на лен – Пу Сунлин (прев. Соня Бояджиева) – стр.516
+-&gt;        o Оживелият Ван Лан – Пу Сунлин (прев. Соня Бояджиева) – стр.518
+-&gt;        o Младшият помощник на управителя на областта Ли – Юан Мей (прев. Соня Бояджиева) – стр.523
+-&gt;        o Ученият от Нанчан – Юан Мей (прев. Соня Бояджиева) – стр.526
+-&gt;        o Сянката разрешава всички съмнения – Ихара Сайкаку (прев. Соня Бояджиева) – стр.529
+-&gt;  * V. Чашата Уацамонга
+-&gt;        o Нартски митове (прев. Соня Бояджиева) – стр.535
+-&gt;        o Изилакулуна, на когото половината тяло било дървено (прев. Соня Бояджиева) – стр.550
+-&gt;        o Как се появил духът Феху-Луни (прев. Соня Бояджиева) – стр.560</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">&gt;	<a href="http://chitanka.info/text/2803">Неутронната звезда</a>
+&gt;	<a href="http://chitanka.info/text/2817">Странникът, който дойде рано сутринта</a>
+&gt;	<a href="http://chitanka.info/text/2859">Песен преди залеза</a>
+&gt;	<a href="http://chitanka.info/text/2860">Щастлив завършек</a>
+&gt;	<a href="http://chitanka.info/text/2861">Мостът на Бетелгейзе</a>
+&gt;	<a href="http://chitanka.info/text/2993">Наричай го „господарю“</a>
+&gt;	<a href="http://chitanka.info/text/3054">Крилата на победата</a>
+&gt;	<a href="http://chitanka.info/text/5041">Мъненките котита на мама Хитън</a>
+&gt;	<a href="http://chitanka.info/text/5254">Юпитер пет</a>
+&gt;	<a href="http://chitanka.info/text/5261">„O“ в Хосе</a>
+&gt;	<a href="http://chitanka.info/text/5262">Градината на времето</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">&gt;	{text:2803}
+
+&gt;	{text:2817}
+
+&gt;	{text:2859}
+
+&gt;	{text:2860}
+
+&gt;	{text:2861}
+
+&gt;	{text:2993}
+
+&gt;	{text:3054}
+
+&gt;	{text:5041}
+
+&gt;	{text:5254}
+
+&gt;	{text:5261}
+
+&gt;	{text:5262}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	„Светове“ (сборник с разкази), изд. „Офир“, 1995 г.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Градът и звездите — Артър Кларк</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/932">Читанка</a>, <a href="http://chitanka.info/admin/book/932/edit">Админ</a>, <a href="http://sfbg.us/book/OTCH-S-87AKGZ">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1125">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Кларк — космическият и земният – Любомир Николов (предговор) – стр.5
+    * Градът и звездите – Артър Кларк – стр.9</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/69">Градът и звездите</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:69}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ГРАДЪТ И ЗВЕЗДИТЕ. 1987. Изд. Отечество. Биб. Фантастика No.48. Научнофантастичен роман. Превод: Любомир НИКОЛОВ [The City And The Stars / Arthur C. CLARKE (1956)]. Предговор: Кларк — космическият и земният — Любомир НИКОЛОВ — с.5–8. Художник: Роберто АНДРЕЕВ. С ил. Печат: ДП Балкан, София. Формат: 32/84×108. Печтни коли: 15. Страници: 240. Цена: 2.14 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Рожби на разума — Клифърд Саймък</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/946">Читанка</a>, <a href="http://chitanka.info/admin/book/946/edit">Админ</a>, <a href="http://sfbg.us/book/KVZR-KBF-0004">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Рожби на разума – стр.5
+-&gt;  * Силата на въображението – стр.199</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/138">Рожби на разума</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:138}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	РОЖБИ НА РАЗУМА. 1995. Изд. Камея, София; Изд. Орфия, София. Биб. Кристална библиотека Фантастика, No.4. Роман. Превод: [от англ.] Емануел ИКОНОМОВ, Сийка ПЕТРОВА [Out of Their Minds, Clifford SIMAK]. Печат: Полипринт, Враца. Формат: 20 см. Страници: 255. Цена: 95.00 лв. ISBN: 954-8340-12-7 (Камея).
+	Съдържа и разказа „Силата на въображението“.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Бъдеще несъвършено — Доминго Сантос</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/960">Читанка</a>, <a href="http://chitanka.info/admin/book/960/edit">Админ</a>, <a href="http://sfbg.us/book/GBKL-GAL-0101">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=371">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Несъвършенствата на настоящето – Венко Кънев (предговор) – стр.5
+    * Пролог на историка (прев. Емилия Папазова) – стр.11
+    * Смог (прев. Пепа Еремиева) – стр.15
+    * Сърдечни сделки (прев. Пепа Еремиева) – стр.29
+    * Странно (прев. Емилия Папазова) – стр.41
+    * Програмата (прев. Пепа Еремиева) – стр.71
+    * Господине, вашата сметка не съществува (прев. Емилия Папазова) – стр.112
+    * Отвъд облаците (прев. Емилия Папазова) – стр.148
+    * Ако утре трябва да умрем (прев. Пепа Еремиева) – стр.189
+    * Притча (прев. Пепа Еремиева) – стр.222
+
+Текст #177 да се раздели на отделни произведения.</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/177">Бъдеще несъвършено</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:177}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://bezmonitor.com (през http://sfbg.us)
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Сезонът на мъглите — Евгений Гуляковски</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/968">Читанка</a>, <a href="http://chitanka.info/admin/book/968/edit">Админ</a>, <a href="http://sfbg.us/book/OTCH-FAN-86SM">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1117">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Фантастичният свят на Евгений Гуляковски – Васил Райков (предговор) – стр.5
+    * Сезонът на мъглите – Евгений Гуляковски – стр.9</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/233">Сезонът на мъглите</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:233}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	СЕЗОНЪТ НА МЪГЛИТЕ. 1986. Изд. Отечество, София. Биб. Фантастика, No.40. Роман. Превод: Елена МАТЕВА [Сезон туманов Евгений Гуляковский (1980; 1982)]. Предговор: Фантастичния свят на Евгений Гуляковски — Васил РАЙКОВ — с.5–7. Художник: Васил МИОВСКИ. Печат: ДП „Д. Найденов“, Велико Търнова. Формат: 70×100/32. Печатни коли: 23.50. Тираж: 92 117 бр. Страници: 372. Цена: 0.99 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Дългият изгрев на Ена — Евгений Гуляковски</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/969">Читанка</a>, <a href="http://chitanka.info/admin/book/969/edit">Админ</a>, <a href="http://sfbg.us/book/OTCH-FAN-87DI">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1120">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Бележка за автора (от редакцията) – стр.5
+    * Дългият изгрев на Ена – Евгений Гуляковски – стр.7</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/234">Дългият изгрев на Ена</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:234}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ДЪЛГИЯТ ИЗГРЕВ НА ЕНА. 1987. Изд. Отечество, София. Биб. Фантастика, No.43. Научно-фантастичен роман. Превод: Елена МАТЕВА [Долгий восход на Энне — Евгений Гуляковскиий (1985)]. Предговор: Бележка за автора, [от редакцията] — с.5–6. Художник: Борис БРАНКОВ. Печат: ДП Балкан, София. Формат: 70×100/32. Печатни коли: 24.5. Страници: 392. Цена: [без сведение].
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Кошерът на Хелстрьом — Франк Хърбърт</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/970">Читанка</a>, <a href="http://chitanka.info/admin/book/970/edit">Админ</a>, <a href="http://sfbg.us/book/BARD-ISF-0016">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Кошерът на Хърбърт – Юлиян Стойнов (предговор) – стр.5
+    * Кошерът на Хелстрьом – Франк Хърбърт – стр.7</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/241">Кошерът на Хелстрьом</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:241}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	КОШЕРЪТ НА ХЕЛСТРЬОМ. 1995. Изд. Бард, София. Биб. Избрана световна фантастика, No.16. Роман. Превод: [от англ.] Юлиян СТОЙНОВ [Hellstorm’s Hive / Frank HERBERT]. Формат: 21 см. Страници: 320. С подв. Цена: 93.00 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Експериментът Досейди — Франк Хърбърт</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/974">Читанка</a>, <a href="http://chitanka.info/admin/book/974/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0013">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Недовършена симфония за саботьори – Светослав Николов (предговор) – стр.6
+    * Експериментът Досейди – Франк Хърбърт – стр.9</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/245">Експериментът Досейди</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:245}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: [[http://sf.bgway.com|Библиотеката на Александър Минковски]] (през http://sfbg.us)
+
+	__Издание:__
+	ЕКСПЕРИМЕНТЪТ ДОСЕЙДИ. 1995. Изд. Аргус, София. Биб. Фантастика No.013. Фантаст. роман. Превод: от англ. Станимир Йотов [The Dosadi Experiment, Frank HERBERT]. Формат: 20 см. Страници: 320. Цена: 110.00 лв. ISBN: 954-570-015-7
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Р" title="Разбиване на произведения">Р</span> Берсеркерите — Фред Саберхаген</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/976">Читанка</a>, <a href="http://chitanka.info/admin/book/976/edit">Админ</a>, <a href="http://sfbg.us/book/OFIR-BFN-0007">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Грешно заглавие на книгата.
+Текст #249 да се разбие на съставните произведения.</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/249">Берсеркерите</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:249}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Фред Саберхаген. Машина-убиец
+	ИК „Офир“, Бургас, 1995
+	Поредица „Библиотека фантастика“ 007
+	Редактор: Никола Кесаровски
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Човекът плюс — Фредерик Пол</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/978">Читанка</a>, <a href="http://chitanka.info/admin/book/978/edit">Админ</a>, <a href="http://sfbg.us/book/KVZR-KBF-0001">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  Фредерик Пол Плюс – Иван Крумов     (предговор) – стр.5
+    Човекът плюс – Фредерик Пол     – стр.7</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/269">Човекът плюс</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:269}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ЧОВЕКЪТ ПЛЮС. 1995. Камея, София / Изд. Орфия, София. Биб. Кристална библиотека Фантастика, No.1. Фантастичен роман. Превод: [от англ.] Елка ГЕОРГИЕВА [Man Plus, by Frederik POHL]. Предговор: Иван КРУМОВ — с. Печат: Полипринт, Враца. Формат: 20 см. Страници: 220. Цнаа: 70.00 лв. (400.00 лв.).
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Генетичният генерал — Гордън Диксън</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/990">Читанка</a>, <a href="http://chitanka.info/admin/book/990/edit">Админ</a>, <a href="http://sfbg.us/book/ORFA-FAN-022S">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Генетичният генерал – Гордън Диксън – стр.5
+-&gt;  * Труй Дорсай, или още нещо за Гордън Диксън (от издателството) – стр.187</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/304">Генетичният генерал</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:304}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ГЕНЕТИЧНИЯТ ГЕНЕРАЛ. 1993. Изд. Орфия, София. Биб. Фантастика, No.22. Научно-фантастичен роман. Превод: [от англ.] Иван МАДАНСКИ [The Genetic General, Gordon DICKSON (1960)]. Послеслов: Труй Дорсай, или още нещо за Гордън Диксън [+ библиография] — [вероятно Иво ХРИСТОВ (редактора на книгата)] — с.187–190. Формат: 70/100/32. Печатни коли: 12. Офс. изд. Страници: 192. Тираж: 6 000 бр. Цена: 18.00 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Кървава музика — Грег Беър</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/992">Читанка</a>, <a href="http://chitanka.info/admin/book/992/edit">Админ</a>, <a href="http://sfbg.us/book/KVZR-KBF-0013">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Малкият свят на великите открития – Юлиян Стойнов (предговор) – стр.5
+    * Кървава музика – Грег Беър – стр.7</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/310">Кървава музика</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:310}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	КЪРВАВА МУЗИКА. 1997. Изд. Камея, София. Биб. Кристална библиотека Фантастика, No.13. Роман. Превод: [от англ.] Юлиян СТОЙНОВ [Blood Music, by Greg BEAR]. Печат: Светлина, Ямбол. Формат: 130×200 мм. Страници: 222. Цена: 2.60 лв. (2600.00 лв.). ISBN: 954-8340-28-3 (грешен).
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Н" title="Друга задача">Н</span> Господарят демон на Каранда — Дейвид Едингс</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1017">Читанка</a>, <a href="http://chitanka.info/admin/book/1017/edit">Админ</a>, <a href="http://sfbg.us/book/BARD-MLR-0002">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Да се обедини с книга № 1018.</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/368">Господарят демон на Каранда</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:368}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	ГОСПОДАРЯТ ДЕМОН НА КАРАНДА. МАГЬОСНИЦАТА ОТ ДАРШИВА. 2001. Изд. Бард, София. Биб. Фентъзи. Роман. Превод: [от англ.] Здравка ЕВТИМОВА [Demon Lord of Karanda. Sorceress of Darshiva / David EDDINGS]. С ил. Формат: 165×235. Страници: 672. Цена: 9.99 лв. ISBN: 954-585-183-1 (грешен); ISBN: 954-585-182-1 (попр.)
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-2" title="Добавяне на 2 текста">2</span> Битката за Фондацията — Айзък Азимов</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1020">Читанка</a>, <a href="http://chitanka.info/admin/book/1020/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0006">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Последният дворец на свети Айзък – Александър Карапанчев (предговор) – стр.6
+    * Битката за фондацията – Айзък Азимов – стр.10
+-&gt;  * Нашата азимовиада (библиографска справка) – стр.429</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/376">Битката за Фондацията</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:376}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	БИТКАТА ЗА ФОНДАЦИЯТА. 1993. Изд. Аргус, София. Биб. Фантастика No.006. Роман. Превод: от англ. Кънчо КОЖУХАРОВ [Forward the Foundation, Iasaac ASIMOV]. Предговор: Последният дворец на Свети Айзък, Александър КАРАПАНЧЕВ — с.6–9. Съдържа също: Нашата Азимовиада, Александър КАРАПАНЧЕВ [библиографска справка за издаваните на бългаски творби на автора] — n.429-430. Художник: Пламен АВРАМОВ; Камо (портрет на автора). Печат: ДФ „Балкан прес“, София. Формат: 58×84/16. Печатни коли: 27. Офс. изд. Тираж: 12 000. Страници: 432. Цена: 45.00 лв. ISBN: 954-570-010-6.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Фондация и Империя — Айзък Азимов</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1022">Читанка</a>, <a href="http://chitanka.info/admin/book/1022/edit">Админ</a>, <a href="http://sfbg.us/book/ORFA-FAN-011S">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Фондация и империя – Айзък Азимов – стр.7
+-&gt;  * Човекът, постигнал „Краят на вечността“ – Росица Панайотова (послеслов) – стр.265</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/378">Фондация и Империя</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:378}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ФОНДАЦИЯ И ИМПЕРИЯ. 1992. Изд. Орфия, София. Биб. Фантастика, No.11. Фантастичен роман. Превод: от англ. Елена ПАВЛОВА [Foundation and Empire, by Isaac ASIMOV (1951)]. Послеслов: Човекът, постигнал „Краят на вечността“, Росица ПАНАЙОТОВА — с.265–267. Художник: Димитър СТОЯНОВ. С портрет на автора. Печат: Св. Георги Победоносец, София. Формат: 70x100/32. (16 см.) Печатни коли: 17. Офс. изд. Тираж: 25 000 бр. Страници: 269 [272] с. Цена: 13.80 лв. ISBN: 954-444-010-0.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Острието на Фондацията — Айзък Азимов</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1024">Читанка</a>, <a href="http://chitanka.info/admin/book/1024/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0011">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Острието на Фондацията – Айзък Азимов – стр.7
+-&gt;  * Азимов отблизо (прев. Светослав Николов) (Айзък Азимов разказва за себе си) – стр.442</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/380">Острието на Фондацията</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:380}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ОСТРИЕТО НА ФОНДАЦИЯТА. 1995. Изд. Аргус, София. Биб. Фантастика No.11 Фантастичен роман. Превод: от англ. Кънчо КОЖУХАРОВ [Foundation’s Edge, Isaac ASIMOV]. С портр. Формат: 20 см. Страници: 448. Цена: 120.00 лв. ISBN: 954-570-012-2.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Хакери на човешките души — Иван Попов</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1031">Читанка</a>, <a href="http://chitanka.info/admin/book/1031/edit">Админ</a>, <a href="http://sfbg.us/book/ERNR-TRF-0001">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Хакери на човешките души – Иван Попов – стр.7
+-&gt;  * За хуманитарния киберпънк и неговата почва в подмандатната територия на злото – Васил Велчев (послеслов) – стр.185</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/409">Хакери на човешките души</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:409}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: [[http://sf.bgway.com|Библиотеката на Александър Минковски]]
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-3" title="Добавяне на 3 текста">3</span> Пет седмици в балон — Жул Верн</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1065">Читанка</a>, <a href="http://chitanka.info/admin/book/1065/edit">Админ</a>, <a href="http://sfbg.us/book/NMLD-PNF-024X">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Пет седмици в балон [Cinq semaines en ballon] (прев. Йордан Павлов) – стр.5
+-&gt;  * Пет седмици в балон – А. Андреев (прев. Йордан Павлов) – стр.221
+#1251?-&gt;  * Пътешествие до центъра на Земята [Voyage au centre de la terre] (прев. Кирил Тодоров) – стр.225
+-&gt;  * Пътешествие до центъра на Земята – акад. Д. И. Шчербаков (прев. Люба Мутафова) – стр.438</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/475">Пет седмици в балон</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:475}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://bezmonitor.com (през http://sfbg.us)
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Пръстенов свят — Лари Нивън</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1085">Читанка</a>, <a href="http://chitanka.info/admin/book/1085/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0004">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Пет ракети и една мъглявина – Светослав Николов (предговор) – стр.6
+    * Пръстенов свят – Лари Нивън – стр.9</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/545">Пръстенов свят</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:545}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ПРЪСТЕНОВ СВЯТ. 1993. Изд. Аргус, София. Биб. Фантастика, No.4 Фантастичен роман. Превод: от англ. Венелин МЕЧКОВ [Ringworld / Larry NIVEN (1970)]. Предговор: Пет ракети и една мъглявина — Светослав НИКОЛОВ — с.6–8. Художник: Емил ВЪЛЕВ. Графика: Камен АТАНАСОВ [Камо][портрет на писателя]. Печат: „Образование и наука“ ЕАД, София. Формат: 70×100/32. Печ. коли: 26. Офс. изд. Тираж: 10 100 бр. Страници: 416. Цена: 32.00 лв. ISBN: 954-570-005-Х.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Съкровището на планетата Земя — Зора Загорска</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1089">Читанка</a>, <a href="http://chitanka.info/admin/book/1089/edit">Админ</a>, <a href="http://sfbg.us/book/NKLT-CHJ-67SZ">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1189">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Съкровището на планетата Земя – Зора Загорска – стр.5
+-&gt;  * За авторката, за книгата – Димитър Добрев (послеслов) – стр.245</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/549">Съкровището на планетата Земя</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:549}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Издателство „Народна култура“ — София, 1967 г.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Сфера — Майкъл Крайтън</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1096">Читанка</a>, <a href="http://chitanka.info/admin/book/1096/edit">Админ</a>, <a href="http://sfbg.us/book/BARD-ISF-0012">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Кутията на Пандора – Юлиян Стойнов (предговор) – стр.5
+    * Сфера – Майкъл Крайтън – стр.8</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/581">Сфера</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:581}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	СФЕРА. 1994. Изд. Бард, София. Биб. Избрана световна фантастика, No.12. Превод: [от англ.] Юлиян СТОЙНОВ [Sphere, Michael CRICHTON]. Предговор: Кутията на Пандора, Юлиян СТОЙНОВ — с.5–7. Художник: Петър ХРИСТОВ. Формат: 84/108/32. Печатни коли: 26. С меки и твърди корици и с подв. Страници: 416. Цена: 63.00 лв. — без подвър.; 73.00 лв. — с подвързия. ISBN: 1473.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Създателят на вселени — Филип Хосе Фармър</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1119">Читанка</a>, <a href="http://chitanka.info/admin/book/1119/edit">Админ</a>, <a href="http://sfbg.us/book/BARD-FCL-0001">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Световете на Филип Хосе Фармър – Юлиян Стойнов (предговор) – стр.4
+    * Създателят на вселени – Филип Хосе Фармър – стр.5</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/660">Създателят на вселени</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:660}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	СЪЗДАТЕЛЯТ НА ВСЕЛЕНИ. 1994. Изд. Бард, София. Биб. Фентъзи клуб, No.1. Фантастичен роман. Превод: [от англ.] Иван ЗЛАТАРСКИ [The Maker of Universes / Philip Jose FARMER (1965)]. Формат: 20 см. Страници: 208. Цена: 50.00 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Кръстоносци в космоса — Пол Андерсън</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1125">Читанка</a>, <a href="http://chitanka.info/admin/book/1125/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0003">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Кръстоносци в космоса – Пол Андерсън – стр.7
+    * От „хаоса“ на всемира до „порядъка“ на въображението – Димитър ЛенГечев (послеслов) – стр.237</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/689">Кръстоносци в космоса</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:689}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: [[http://sf.bgway.com|Библиотеката на Александър Минковски]]
+
+	__Издание:__
+	КРЪСТОНОСЦИ В КОСМОСА. 1993. Изд. Аргус, София. Биб. Фантастика, No.3. Фантастичен роман. Превод: от англ. Любен НИКОЛОВ [The High Crusade, Poul ANDERSON]. Формат: 17 см. Страници: 240. Цена: 20 лв. ISBN: 954-570-004-1.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Звездният звяр — Робърт Хайнлайн</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1136">Читанка</a>, <a href="http://chitanka.info/admin/book/1136/edit">Админ</a>, <a href="http://sfbg.us/book/OTCH-FAN-89ZZ">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1132">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Звездният звяр – Робърт Хайнлайн – стр.5
+-&gt;  * За автора и книгата – Огняна Иванова (послеслов) – стр.321</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/739">Звездният звяр</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:739}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ЗВЕЗДНИЯТ ЗВЯР. 1989. Изд. Отечество. Биб. Фантастика No.55. Научнофантастичен роман. Превод: Огняна ИВАНОВА [Star Beast, Robert A. HEINLEIN (1954)]. Художник: Борис БРАНКОВ. С ил. Послеслов: За автора и книгата — Огняна ИВАНОВА — с.321–323. Печат: „Георги Димитров“, София. Формат: 70×100/32. Печатни коли: 20.5. Страници: 328. Цена: 2.21 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Време на промени — Робърт Силвърбърг</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1145">Читанка</a>, <a href="http://chitanka.info/admin/book/1145/edit">Админ</a>, <a href="http://sfbg.us/book/BARD-ISF-0004">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Звездната карта на Силвърбърг – Юлиян Стойнов (предговор) – стр.5
+    * Време на промени – Робърт Силвърбърг – стр.7</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/757">Време на промени</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:757}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ВРЕМЕ НА ПРОМЕНИ. 1993. Изд. Бард, София. Биб. Избрана световна фантастика, No.4. Фантастичен роман. Превод: [от англ. и предг.] Юлиян СТОЙНОВ [A Time of Changes, Robert SILVERBERG]. Печатница: Абагар, Велико Търново. Формат: 21 см. Офс. изд. Тираж: 3 000 бр. С подв. Страници: 318. Цена: 38.00 лв. ISBN: 1407.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-2" title="Добавяне на 2 текста">2</span> Железният карнавал — Серж Брюсоло</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1156">Читанка</a>, <a href="http://chitanka.info/admin/book/1156/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0012">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Карнавал по европейски – Александър Карапанчев (предговор) – стр.7
+    * Железен карнавал
+-&gt;  * Алхимикът от Париж – Любомир Найденов (интервю) – стр.263
+
+Грешно заглавие на книга.</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/792">Железният карнавал</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:792}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: [[http://sf.bgway.com|Библиотеката на Александър Минковски]]
+	Публикация: Издателство „Аргус“, София 1995
+	Серж БРЮСОЛО. ЖЕЛЕЗЕН КАРНАВАЛ. 1995. Изд. Аргус, София. Биб. Фантастика No.12 Фантастичен роман. Превод от френски: Любомир НАЙДЕНОВ [Le Carnaval de fer, Serge BRUSSOLO]. С портр. Формат: 20 см. Страници: 272. Цена: 80.00 лв. ISBN: 954-570-013-0.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Синдик — Сирил М. Корнблът</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1166">Читанка</a>, <a href="http://chitanka.info/admin/book/1166/edit">Админ</a>, <a href="http://sfbg.us/book/ORFA-FAN-028S">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Синдик – Сирил Корнблат – стр.5
+-&gt;  * Сирил Корнблат (биография) – стр.190</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/845">Синдик</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:845}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	СИНДИК. 1994. Изд. Видело, София (Изд. Орфия, София). Биб. Фантастика — Орфия, No.28. Фантастичен роман. Превод: [от англ.] Елка ГЕОРГИЕВА [Syndic, by Cyril KORNBLUTH (1953)]. Послеслов: Сирил Корнблат (1923–1958). Информаци за „Еврокон ’94“. Формат: 70/100/32 (16 см.). Страници: 192. Цена: 28.00 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Гробниците на Атуан — Урсула Ле Гуин</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1171">Читанка</a>, <a href="http://chitanka.info/admin/book/1171/edit">Админ</a>, <a href="http://sfbg.us/book/ORFA-FAN-017S">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Землемория II: Гробниците на Атуан – Урсула Ле Гуин – стр.5
+-&gt;  * Магьосницата от Тера Фантазия – Александър Карапанчев (послеслов) – стр.157</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/875">Гробниците на Атуан</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:875}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ЗЕМЛЕМОРИЯ ІІ: ГРОБНИЦИТЕ НА АТУАН. 1992. Изд. Орфия, София. Биб. Фантастика, No.17. Роман. Превод: от англ. Мария КРЪСТЕВА [The Tombs of Atuan / Ursula LE GUIN (1972)]. Въведение: Накратко за „Землемория“ І — с.5. Послеслов: Александър КАРАПАНЧЕВ — с.157–158. Художник: Фико ФИКОВ. С карта. Печат: Военноиздателски комплекс „Св. Георги Победоносец“, София. Формат: 70×100/32. Печатни коли: 10. Тираж: 20 000 бр. Страници: 160. Цена: 12.00 лв. ISBN: 954-444-019-4.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-2" title="Добавяне на 2 текста">2</span> Техану — Урсула Ле Гуин</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1173">Читанка</a>, <a href="http://chitanka.info/admin/book/1173/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0005">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * „Техану“ и „Аргус“ – Александър Карапанчев (предговор) – стр.5
+    * Техану – Урсула Ле Гуин – стр.9
+-&gt;  * „В къщата на литературата има много стаи…“ – Кристофър Бигсби (интервю) (прев. Харалампи Яничкин) – стр.295</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/877">Техану</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:877}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ЗЕМЛЕМОРИЯ IV. ТЕХАНУ. 1993. Изд. Аргус, София. Биб. Фантастика, No.5. Фантастичен роман. Превод: от англ. Мария КРЪСТЕВА [Tehuanu: The Last Book of Earthsea / Ursula K. LE GUIN (1990)]. Художник: Джеймс УОРХОУЛА (корица). Географска карта: КАМО. Предговор: „Техуан“ &amp; „Аргус“ — Александър КАРАПАНЧЕВ — с.5–7. Формат: 70×100/32 (17 см.). Печатни коли 19. Тираж: 10 000 бр. Страници: 304. Цена: 29.00 лв. ISBN: 954-570-006-8
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Психопрограмираният — Атанас П. Славов</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1182">Читанка</a>, <a href="http://chitanka.info/admin/book/1182/edit">Админ</a>, <a href="http://sfbg.us/book/ORFA-FAN-012S">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Психопрограмираният – Атанас П. Славов – стр.5
+-&gt;  * Нещо като болка, нещо като вик, изобщо не някакво си предписание… – Димитър ЛенГечев (послеслов) – стр.201</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/967">Психопрограмираният</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:967}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://www.fantastika-bg.com (през http://sfbg.us)
+
+	__Издание:__
+	ПСИХОПРОГРАМИРАНИЯТ. 1992. Изд. Орфия, София. Биб. Фантастика No.12. Фантастичен роман. Формат: 16 см. Офс. изд. Тираж: 10 000 бр. Страници: 204. Цена: 10.00 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Пророчицата от Кел — Дейвид Едингс</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1183">Читанка</a>, <a href="http://chitanka.info/admin/book/1183/edit">Админ</a>, <a href="http://sfbg.us/book/BARD-MLR-0003">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Пророчицата от Кел [The Seeress of Kell] (прев. Здравка Евтимова) – стр.5
+-&gt;  * Ривански сборник – Дейвид Едингс, Лей Едингс [The Rivan Codex // David Eddings, Leigh Eddings] (прев. Крум Бъчваров) – стр.383</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/970">Пророчицата от Кел</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:970}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	ПРОРОЧИЦАТА ОТ КЕЛ. 2001. Изд. Бард, София. Фентъзи. Роман. Превод: [от англ.] Здравка ЕВТИМОВА, Крум БЪЧВАРОВ [The Seeress of Kell, David EDDINGS] С ил. Формат: 24 см. Страници: 512. ISBN: 954-585-199-6.
+	Съдържание:
+	Пророчицата от Кел [The Seeress of Kell]
+	Ривански кодекс: Древни текстове от Белгариадата и Хрониките на Малореон [The Rivan Codex] / пр. Крум БЪЧВАРОВ
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Стоманените пещери — Айзък Азимов</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1198">Читанка</a>, <a href="http://chitanka.info/admin/book/1198/edit">Админ</a>, <a href="http://sfbg.us/book/OTCH-FAN-83SP">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1104">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Първородството на фантастиката – Огняна Иванова (предговор) – стр.5
+    * Стоманените пещери – Айзак Азимов – стр.9</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1128">Стоманените пещери</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1128}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://bezmonitor.com (през http://sfbg.us)
+
+	Заб: Вероятно липсват сюжетни разделители между параграфите и наклонен текст.
+
+	__Издание:__
+	СТОМАНЕНИТЕ ПЕЩЕРИ. 1983. Изд. Отечество, София. Биб. Фантастика, No.27. Научно-фантастичен роман. Превод: Огняна ИВАНОВА [The Caves of Steel / Isaak ASIMOV (1954)]. Предговор: Първородството на фантастиката — Огняна ИВАНОВА — с.5–8. Художник: Петър БРАЙКОВ. С ил. Печат: ДП Балкан, София. Формат: 70×100/32 (1/32 70/100. Печатни коли: 19,50. Страници: 312. Цена: 0.83 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Войната на Либърти — Джеф Груб</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1201">Читанка</a>, <a href="http://chitanka.info/admin/book/1201/edit">Админ</a>, <a href="http://sfbg.us/book/SRPS-SCR-0001">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Войната на Либърти – Джеф Грубб – стр.5
+-&gt;  * За автора – стр.300</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1203">Войната на Либърти</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1203}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Билбо Бегинс или дотам и обратно — Джон Р. Р. Толкин</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1203">Читанка</a>, <a href="http://chitanka.info/admin/book/1203/edit">Админ</a>, <a href="http://sfbg.us/book/NMLD-S-75JTBB">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1582">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Билбо Бегинс или Дотам и обратно – Дж. Р. Р. Толкин – стр.5
+-&gt;  * Послеслов към романа „Билбо Бегинс“ – Красимира Тодорова (послеслов) – стр.280</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1206">Билбо Бегинс или дотам и обратно</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1206}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Какавидите — Джон Уиндъм</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1205">Читанка</a>, <a href="http://chitanka.info/admin/book/1205/edit">Админ</a>, <a href="http://sfbg.us/book/OTCH-FAN-82K1">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1101">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Какавидите – Джон Уиндам – стр.5
+-&gt;  * С мисъл за пеперудите – Огняна Иванова (послеслов) – стр.276</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1209">Какавидите</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1209}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	КАКАВИДИТЕ. 1982. Изд. Отечество, София. Биб. Фантастика, No.24. Научно-фантастичен роман. ІІ изд. Превод: Огняна ИВАНОВА [The Chrysalids — John Wyndham (1955; превода е направен по изданието от 1978)]. Послеслов: С мисъл за пеперудите — Огняна ИВАНОВА [отбелязана като О.И.]- с.276–278. Художник: Ясен ВАСИЛЕВ. С ил. Печат: ДП Балкан, София. Формат: 70×100/32. Печатни коли: 17,50. Страници: 280. Цена: 0.76 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Извънземна връзка — Л. Рон Хабърд</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1215">Читанка</a>, <a href="http://chitanka.info/admin/book/1215/edit">Админ</a>, <a href="http://sfbg.us/book/VUZV-MSZ-0004">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Извънземна връзка – Л. Рон Хабърд – стр.13
+-&gt;  * За автора Л. Рон Хабърд – стр.387</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1282">Извънземна връзка</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1282}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	МИСИЯ ЗЕМЯ. ТОМ 4. ИЗВЪНЗЕМНА ВРЪЗКА. 1995. Изд. Вузев, София. Фантастичен роман. Превод: [от англ.] Владимир ЗАРКОВ [Mission Earth / L. Ron HUBBARD]. Печат: Полиграфия, Пловдив. Със схеми. Формат: 18 см. Страници: 390. Цена: ----. ISBN: 954-422-035-6 (т. 4).
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Дипломатически имунитет — Лоис Макмастър Бюджолд</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1229">Читанка</a>, <a href="http://chitanka.info/admin/book/1229/edit">Админ</a>, <a href="http://sfbg.us/book/BARD-ISF-0103">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Дипломатически имунитет [Diplomatic Immunity] (прев. Милена Илиева) – стр.5
+-&gt;  * Етан от Атос [Ethan of Athos] (прев. Георги Стоянов) – стр.349</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1315">Дипломатически имунитет</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1315}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Лоис Макмастър Бюджолд. Дипломатически имунитет
+	Американска, първо издание
+	Превод: Милена Илиева
+	Редактор: Иван Тотоманов
+	Художествено оформление на корица: „Megachrom“ — Петър Христов
+	Формат: 84/108/32
+	Печатни коли: 34
+	ИК „Бард“ ООД, 2003 г.
+	Библиотека „Избрана световна фантастика“ №103
+	ISBN: 954-585-428-6
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-2" title="Добавяне на 2 текста">2</span> Мечтаят ли роботите за електроовце? — Филип К. Дик</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1233">Читанка</a>, <a href="http://chitanka.info/admin/book/1233/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0007">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Писател от друг свят – Юлиян Стойнов (предговор) – стр.6
+    * Беглец по острието – Филип К. Дик – стр.9
+-&gt;  * Вместо изповед – стр.248
+
+Грешно име на книга/произведение
+Нередактиран превод?</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1352">Мечтаят ли роботите за електроовце?</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1352}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	БЕГЛЕЦ ПО ОСТРИЕТО. 1994. Изд. Аргус, София. Биб. Фантастика, No.7. Роман. Превод: от англ. Юлиян СТОЙНОВ [Blade Runner, Philip K. DICK (1968) [на практика, би трябвало превода да е направен по преизданието от 1995 което носи това име; оригиналното название на романа от 1968 е Do Androids Dream of Electric Sheep (Сънуват ли андроидите електрически овце?)]. Предговор: Писател от друг свят, Юлиян СТОЙНОВ — с.6–8. Послеслов: Вместо изповед (писателя за своя живот, за страховете и надеждите си, за фантастиката и наркотиците [из интервю на Чарлз Плет с Филип К. ДИК] — с.248–252. Художник: Момчил МИТЕВ (корица); КАМО (портрет на писателя). Печат: ДФ Балкан прес, София. Формат: 56×10/16. Печатни коли 16. Страници: 254. Цена: 35.00 лв. ISBN: 954-570-009-2.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Човекът във високия замък — Филип К. Дик</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1234">Читанка</a>, <a href="http://chitanka.info/admin/book/1234/edit">Админ</a>, <a href="http://sfbg.us/book/BARD-ISF-0002">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Пътят към високия замък – Юлиян Стойнов (предговор) – стр.5
+    * Човекът във високия замък – Филип К. Дик – стр.11</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1354">Човекът във високия замък</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1354}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ЧОВЕКЪТ ВЪВ ВИСОКИЯ ЗАМЪК Фантастичен роман. 1993. Изд. Бард, София. Избрана световна фантастика, No.2. Превод: [от англ.] Юлиян СТОЙНОВ [The Man in the Hight Castle / Philip K. DICK]. Предговор: Пътят към Високия замък, Юлиян СТОЙНОВ — с.5–10. Печат: Абагар, Велико Търново. Формат: 84/108/32 (125×195 мм.). Печатни коли: 32. Офс. изд. Тираж: 3 000 бр. С мека и твърда корица и с подв. Страници: 352. (224 с.) Цена: 38.00 лв. ISBN: 954-585-002-3 (ISBN: 590).
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-3" title="Добавяне на 3 текста">3</span> Измерения на чудесата — Робърт Шекли</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1237">Читанка</a>, <a href="http://chitanka.info/admin/book/1237/edit">Админ</a>, <a href="http://sfbg.us/book/KVZR-KBF-0003">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Измеренията на чудесата – стр.3
+-&gt;  * Разкази
+-&gt;        o На поклонение до Земята – стр.185
+-&gt;        o Демони – стр.199
+
+Грешно име на книга/произведение</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1415">Измерения на чудесата</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1415}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ИЗМЕРЕНИЯТА НА ЧУДЕСАТА. 1995. Изд. Камея, София. Изд. Орфия, София. Биб. Кристална библиотека Фантастика, No.3. Роман. Превод: [от англ.] Владимир ЗАРКОВ, Иван МАДАНСКИ [Dimensions of Miracle, by Robert SHECKLEY]. Печат: Полипринт, Враца. Формат: 20 см. Страници: 212. Цена: 85.00 лв. ISBN: 954-8340-11-9  (Камея) (не е отпеч.)
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Създания от светлина и мрак — Роджър Зелазни</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1240">Читанка</a>, <a href="http://chitanka.info/admin/book/1240/edit">Админ</a>, <a href="http://sfbg.us/book/ORFA-FAN-018S">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Създания от светлина и мрак – Роджър Зелазни – стр.5
+-&gt;  * Между светлината и мрака – Росица Панайотова (послеслов) – стр.202</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1468">Създания от светлина и мрак</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1468}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	Роджър Зелазни. Създания от светлина и мрак
+	Фантастичен роман
+	Орфия, София, 1992
+	Превод от английски: Александър Бояджиев
+	Художник: Цветан Пантев, 1992
+	Редакционен екип: Александър Карапанчев, Атанас П. Славов, Димитър Ленгечев, Росица Панайотова, Светослав Николов
+	ISBN 954-444-021-6
+
+	Roger Zelazny. Creatures of Light and Darkness, 1969
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Господарят на светлината — Роджър Зелазни</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1242">Читанка</a>, <a href="http://chitanka.info/admin/book/1242/edit">Админ</a>, <a href="http://sfbg.us/book/BARD-ISF-0003">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Хора като богове – Юлиян Стойнов (предговор) – стр.5
+    * Господарят на светлината – Роджър Зелазни – стр.7</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1470">Господарят на светлината</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1470}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ГОСПОДАРЯТ НА СВЕТЛИНАТА. 1993. Изд. Бард, София. Биб. Избрана световна фантастика, No.3. Фантастичен роман. Превод: от англ. Юлиян СТОЙНОВ [Lord of Light, Roger ZELAZNY]. Печат: Абагар, Велико Търново.  Формат: 21 см. С подв. Офс. изд. Тираж: 3 000 бр. Страници: 350. Цена: [Без сведение за цена].
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Вавилон 17 — Самуел Дилейни</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1244">Читанка</a>, <a href="http://chitanka.info/admin/book/1244/edit">Админ</a>, <a href="http://sfbg.us/book/KVZR-KBF-0007">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Вавилон 17 – стр.3
+-&gt;  * Времето е една спирала от полускъпоценни камъни – стр.219</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1481">Вавилон 17</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1481}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ВАВИЛОН 17. 1996. Изд. Камея, София. Биб. Биб. Кристална библиотека Фантастика, No.7. Роман. Превод: [от англ.] Иван МАДАНСКИ [Babel 17, by Samuel DELANY]. Печат: Полипринт, Враца. Формат: 20 см. Страници: 272. Цена: 135.00 лв. ISBN: 954-8340-14-3 (грешен); ISBN: 954-8340-09-7 (поправен).
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Приключения в Дарвил — Христо Пощаков</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1286">Читанка</a>, <a href="http://chitanka.info/admin/book/1286/edit">Админ</a>, <a href="http://sfbg.us/book/MRTL-S-96HPPD">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Приключения в Дарвил – стр.5
+-&gt;  * Къси и съвсем къси страшни разкази
+#1071     o Лошите бели хора – стр.122
+#1752     o Краят на света – стр.130
+#1073     o Не искам да ми се доверяват – стр.136
+#1068     o Иван и изродите – стр.143
+#1066     o Големият ужас – стр.152
+#1064     o Дългият път към ада – стр.156
+#1075     o Невероятна история – стр.161
+#1069     o Колко прави две плюс две? – стр.166
+#1099     o Втората смърт на Антонио – стр.172
+#1732     o Клопката – стр.175
+#1085     o Последният вампир – стр.184
+#1080     o Омагьосаната графиня – стр.186
+#1077 (!) o Никога не ядосвай собствената жена – стр.188
+#1733     o Условие за съвършена любов – стр.190
+#1748     o Отмъщението – стр.192
+#1754     o Работа с добро заплащане – стр.194
+#1742     o Смъртта на наемника – стр.196
+#1100     o Закупена вечност – стр.198
+#1098     o Успокоителна смърт – стр.200
+#1718     o Нещастният демон – стр.202
+#1736     o Ретроспекция – стр.204
+#1062     o Делова жена – стр.206
+#1102     o Зловещ монолог – стр.208
+#1092     o Сделка с дявола – стр.210
+#1734     o Наказание за лакомство – стр.213
+#1753     o Дали вълшебникът Хуго постъпи достатъчно правилно? – стр.215
+#1749     o Как се спаси човечеството – стр.217</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1721">Приключения в Дарвил</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1721}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: [[http://sf.bgway.com|Библиотеката на Александър Минковски]]
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-2" title="Добавяне на 2 текста">2</span> Светът на Роканон — Урсула Ле Гуин</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1297">Читанка</a>, <a href="http://chitanka.info/admin/book/1297/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0034">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * От индианеца Иши до… Роканон – Александър Карапанчев (предговор) – стр.6
+    * Светът на Роканон – Урсула Ле Гуин – стр.9
+-&gt;  * Ах, тази Урсула (за книгите на Ле Гуин) – стр.157</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1805">Светът на Роканон</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1805}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: [[http://sf.bgway.com|Библиотеката на Александър Минковски]]
+
+	__Издание:__
+	СВЕТЪТ НА РОКАНОН. 1998. Изд. Аргус, София. Биб. Фантастика No.34. Превод: от англ. Силвана МИЛАНОВА [Rocannon’s World / Ursula LE GUIN]. Печат: Балкан прес, София. Формат: 20 см. Офс. изд. Тираж: 2 000 бр. Страници: 160. Цена: 2900.00 лв. ISBN: 954-570-039-4.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Прелюдия за Фондацията — Айзък Азимов</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1301">Читанка</a>, <a href="http://chitanka.info/admin/book/1301/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0031">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Прелюдия за фондацията – Айзък Азимов – стр.7
+-&gt;  * Откривателството като сюжет – Светослав Николов (послеслов) – стр.426</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/1836">Прелюдия за Фондацията</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:1836}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	ПРЕЛЮДИЯ ЗА ФОНДАЦИЯТА. 1997. Изд. Аргус, София. Биб. Фантастика No.31. Превод: от англ. Кънчо КОЖУХАРОВ [Prelude to Fondation, Isaac ASIMOV &amp; Robert SILVERBERG (1988)]. Послеслов: Откривателството като сюжет (субективен поглед), Светослав НИКОЛОВ — с.426–428. Художник: Венцислав ИЛИЕВ (корица); КАМО (портрет на писателя, 1993). Печат: Балкан прес ЕАД, София. Формат: 56x84/16. Печатни коли: 27. Страници: 430. Цена: 3900.00 лв. ISBN: 954-570-036-X.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Една одисея в космоса през 2001-та година — Артър Кларк</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1384">Читанка</a>, <a href="http://chitanka.info/admin/book/1384/edit">Админ</a>, <a href="http://sfbg.us/book/NIIZ-S-82AKOK">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=2671">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * За романа – Владимир Джейков (предговор) – стр.5
+    * Предговор (предговор) – стр.9
+    * Една одисея в космоса през 2001-та година – Артър Кларк – стр.11</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/2072">Една одисея в космоса през 2001-та година</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:2072}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://sfbg.us
+
+	__Издание:__
+	Една одисея в космоса през 2001-та година. 1982. Изд. Наука и изкуство. ІІ издание. Превод: Владимир Христов Джейков [2001: A Space Odyssey]. Художник: Николай ПЕКАРЕВ. Формат: 16/60/84. Печатни коли: 12.17. Издателски No.25664. Индекс Ч820. Страници: 204.
+
+	Първото издание е от 1974 на същото издателство.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Планетата на Шекспир — Клифърд Саймък</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1416">Читанка</a>, <a href="http://chitanka.info/admin/book/1416/edit">Админ</a>, <a href="http://sfbg.us/book/OTCH-FAN-90PS">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=312">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * За един по-човечен свят – Асен Милчев (предговор) – стр.5
+    * Планетата на Шекспир – Клифърд Саймък – стр.11</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/2137">Планетата на Шекспир</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:2137}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	ПЛАНЕТАТА НА ШЕКСПИР. 1990. Изд. Отечество, София. Биб. Фантастика No.60. Научнофантастичен роман. Превод: от англ. Емануел ИКОНОМОВ [Shakspeare’s Planet / Clifford D. SIMAK (1976)]. Предговор: За един по-човечен свят — Асен МИЛЧЕВ — с.5–9. Художник: Васил ИНДЖЕВ. С ил. Печатница: ДП „Георги Димитров“, София. Печатни коли: 12.50. Страници: 216. Формат: 32/70/100. 17 см. Без тираж. Цена: 4.20 лв.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Къртицата — Любомир Николов</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1488">Читанка</a>, <a href="http://chitanka.info/admin/book/1488/edit">Админ</a>, <a href="http://sfbg.us/book/OTCH-FAN-81KR">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1093">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Думи в началото – Агоп Мелконян (предговор) – стр.5
+    * Къртицата – Любомир Николов – стр.7</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/2419">Къртицата</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:2419}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Публикация: Издателство „Отечество“, 1981
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Натоварени със зло — Аркадий Стругацки, Борис Стругацки</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1576">Читанка</a>, <a href="http://chitanka.info/admin/book/1576/edit">Админ</a>, <a href="http://sfbg.us/book/GRNT-S-93BSNZ">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Няколко думи за книгата – Иван Петров (предговор) – стр.5
+    * Натоварени със зло – Аркадий и Борис Стругацки – стр.7</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/2826">Натоварени със зло</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:2826}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Аркадий Стругацки, Борис Стругацки. Натоварени със зло
+	ДП „Гарант“, 1993
+
+	Аркадий Стругацкий, Борис Стругацкий
+	Отягощенные злом, или Сорок лет спустя, 1988 г.
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-2" title="Добавяне на 2 текста">2</span> Далечната планета — Аркадий Стругацки, Борис Стругацки</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1585">Читанка</a>, <a href="http://chitanka.info/admin/book/1585/edit">Админ</a>, <a href="http://sfbg.us/book/NIIZ-S-69BSDP">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=2677">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Далечната планета – стр.5
+-&gt;  * Трудно е да бъдеш бог – стр.139
+-&gt;  * … и вечна борба! – Р. Нуделман (послеслов) – стр.329</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/2848">Далечната планета</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:2848}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Аркадий и Борис Стругацки. Далечната планета
+	Издателство „Наука и изкуство“, 1969 г.
+	Превод: Нина Левенсон
+	Превод на стиховете: Йордан Стратиев
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Гибелта на „Аякс“ — Павел Вежинов</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1617">Читанка</a>, <a href="http://chitanka.info/admin/book/1617/edit">Админ</a>, <a href="http://sfbg.us/book/OTCH-FAN-89GA">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1133">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;     * Предговор – Васил Райков (предговор) – стр.5
+       * Гибелта на „Аякс“ – стр.9
+#2909  * Над всичко – стр.245</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/2901">Гибелта на „Аякс“</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:2901}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Павел Вежинов
+	ГИБЕЛТА НА „АЯКС“
+
+	Редактор АСЕН МИЛЧЕВ
+	Художник АЛЕКСАНДЪР АЛЕКСОВ
+	Художествен редактор БОРИС БРАНКОВ
+	Художествено оформление ВАСИЛ МИОВСКИ
+	Технически редактор СПАС СПАСОВ
+	Коректор ЦВЕТЕЛИНА НЕЦОВА
+
+	Код 11/95373/6257—7—89
+	Българска. Дадена за печат м.XI. 1988 г. Подписана за печат м.II.1989 г.
+	Излязла от печат м.V. 1989 г. Формат 32/70/100. Изд. коли 13,28.
+	Печатни коли 20,5. УИК 14.31. Цена 2.22 лв.
+
+	Държавно издателство „Отечество“, пл. „Славейков“ 1, София, 1989
+	Държавна печатница „Георги Димитров“, бул. „Ленин“ 117, София, 1989
+	© Павел Вежинов, 1989
+	© Александър Алексов, художник, 1989
+	с/о Jusautor, Sofia
+	ДБ-3
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Н" title="Друга задача">Н</span> Бог-император на Дюна — Франк Хърбърт</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1640">Читанка</a>, <a href="http://chitanka.info/admin/book/1640/edit">Админ</a>, <a href="http://sfbg.us/book/BARD-VMF-0008">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Грешно име на книга; точното е „Дюн (том втори)“
+
+#2670  * Децата на дюна [Children of Dune] (прев. Александър Бояджиев) – стр.5
+       * Бог-император на Дюна [God Emperor of Dune] (прев. Александър Бояджиев) – стр.437</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/2987">Бог-император на Дюн</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:2987}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Франк Хърбърт
+	Бог-император на Дюн
+	Американска
+	ИК „Бард“ ООД, 2004 г.
+
+	GOD EMPEROR OF DUNE
+	© 1981 by The Herbert Limited Partnership
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-2" title="Добавяне на 2 текста">2</span> Дюна: Родът Атреидес — Брайън Хърбърт, Кевин Андерсън</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1714">Читанка</a>, <a href="http://chitanka.info/admin/book/1714/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0049">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Бисер с непомръкващ блясък – Брайън Хърбърт (предговор) – стр.7
+    * Дюна: Родът Атреидес – Брайън Хърбърт, Кевин Андерсън – стр.11
+-&gt;  * Разходка в пустинята – Кевин Дж. Андерсън (послеслов) – стр.572
+
+(предговорът и послесловът да се отделят от произведението)</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/3525">Дюна: Родът Атреидес</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:3525}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Издателство „Аргус“, 2000
+	Камо, карта, 2000
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Н" title="Друга задача">Н</span> Арканзаски трапери — Гюстав Емар</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1753">Читанка</a>, <a href="http://chitanka.info/admin/book/1753/edit">Админ</a>, <a href="http://sfbg.us/book/OTCH-IKD-80AT">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=631">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Посоченото за анотация всъщност е предговор.</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/3611">Арканзаски трапери</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:3611}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Гюстав Емар
+	АРКАНЗАСКИ ТРАПЕРИ
+
+	Библиотечно оформление СТЕФАН ГРУЕВ
+	Превод от френски ОГНЯН ВАРТОЛОМЕЕВ И СТОЯН КАЗАНДЖИЕВ
+	Художник ПЕТЪР ЧУКЛЕВ, 1979
+	Редактор ЛИЛИЯ РАЧЕВА
+	Художествен редактор ВЕНЕЛИН ВЪЛКАНОВ
+	Технически редактор ИВАН АНДРЕЕВ
+	Коректор АЛБЕНА НИКОЛАЕВА
+
+	ФРЕНСКА, ВТОРО ИЗДАНИЕ. ИЗД. НОМЕР 366. ДАДЕНА ЗА НАБОР НА 24. VIII. 1979 Г. ПОДПИСАНА ЗА ПЕЧАТ НА 22. X. 1979 Г. ИЗЛЯЗЛА ОТ ПЕЧАТ НА 23. И. 1980 Г. ФОРМАТ 116 6090. ПЕЧАТНИ КОЛИ 15,50. ИЗДАТЕЛСКИ КОЛИ 15.50 ЦЕНА 1.60 ЛВ.
+	КОД № 11
+	95378 25432/6356—25—79
+
+	ИЗДАТЕЛСТВО „ОТЕЧЕСТВО“. БУЛ. „ГЕОРГИ ТРАЙКОВ“ 2А
+	ПЕЧАТНИЦА „Т. ДИМИТРОВ“ — СОФИЯ
+	София, 1980
+	с/о Jusautor, Sofia
+
+	Les Trappeurs de l’Arkansas
+	par Gustave Aimard
+	Paris, Amyot, Éditeur, 8 rue de la Paix
+	MDCCCLVIII
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Битка за вечността — Алфред Ван Вогт</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1946">Читанка</a>, <a href="http://chitanka.info/admin/book/1946/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0050">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Битка за вечността – Алфред Ван Вогт – стр.7
+-&gt;  * Букет за Ван Вогт – Александър Карапанчев (послеслов) – стр.188</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/5515">Битка за вечността</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:5515}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: Преводачът
+
+	__Издание:__
+	Издателство „Аргус“ — София, 2000
+	Редактор: Петър Колев
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Митични представи — Робърт Асприн</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/1959">Читанка</a>, <a href="http://chitanka.info/admin/book/1959/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0041">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Отбор за чудо и приказ – Александър Карапанчев (предговор) – стр.6
+    * Митични представи – Робърт Асприн – стр.10
+
+(предговорът да се отдели от произведението)</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/5781">Митични представи</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:5781}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	„Аргус“, 1999
+	Поредица: „Фантастика“, №41
+	ISBN: 954-570-049-1
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Митично подвеждане — Робърт Асприн</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/2048">Читанка</a>, <a href="http://chitanka.info/admin/book/2048/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0045">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Не пропускай поредния мит – Емануел Икономов (предговор) – стр.6
+    * Митично подвеждане – Робърт Асприн – стр.9
+
+(предговорът да се отдели от произведението)</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/8107">Митично подвеждане</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:8107}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Издателство „Аргус“, София 1999
+	Поредица „Фантастика“ №45
+	ISBN: 954-570-058-0
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Митична бъркотия — Робърт Асприн</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/2107">Читанка</a>, <a href="http://chitanka.info/admin/book/2107/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-FNT-0047">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Художниците от кръга „Аргус“ – Александър Карапанчев (предговор) – стр.7
+    * Митична бъркотия – Робърт Асприн – стр.11</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/8705">Митична бъркотия</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:8705}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Издателство „Аргус“, 2000
+	Поредица „Фантастика“ №47
+	Превод: Кънчо Кожухаров, 2000
+	ISBN: 954-570-064-5
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Н" title="Друга задача">Н</span> Доктор Джекил и господин Хайд — Робърт Луис Стивънсън</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/2218">Читанка</a>, <a href="http://chitanka.info/admin/book/2218/edit">Админ</a>, <a href="http://sfbg.us/book/NKLT-CHJ-75OS">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1255">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Липсва „Островът на съкровищата“</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/9302">Доктор Джекил и господин Хайд</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:9302}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Робърт Луи Стивънсън
+	Островът на съкровищата
+	Доктор Джекил и господин Хайд
+	„Народна култура“, София, 1975
+
+	Английска. Първо издание
+	Литературна група V
+	Превела от английски Евгения Паничерска-Камова
+	Редактор Христо Кънев
+	Художник Стоян Шиндаров
+	Художник-редактор Васил Йончев
+	Техн. редактор Александър Димитров
+	Коректор Емилия Спасова
+
+	Дадена за набор 10.III.1975 г. Подписана за печат 25.V.1975 г. Излязла от печат 10.VI.1975 г. Формат 84×108/32. Печатни коли 18. Издателски коли 13.87. Цена 1,02
+	Печат: ДП „Ст. Добрев — Странджата“, Варна
+
+	Progress Publishers. Moscow, 1972
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Новозавладените звезди — Джеймс Блиш</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/2260">Читанка</a>, <a href="http://chitanka.info/admin/book/2260/edit">Админ</a>, <a href="http://sfbg.us/book/OTCH-FAN-85NZ">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1112">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">    * Новозавладените звезди – Джеймс Блиш – стр.5
+-&gt;  * Един учен — с грижа за човечеството – Невена Златарева (послеслов) – стр.274</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/9456">Новозавладените звезди</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:9456}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Джеймс Блиш. Новозавладените звезди
+	Издателство „Отечество“, София, 1985
+
+	Преведе от английски Невена Златарева-Чичкова
+	Редактор Огняна Иванова
+	Художник Татяна Станкулова
+	Художествен редактор Борис Бранков
+	Технически редактор Стефка Маринова
+	Коректор Снежана Бошнакова
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Сградата — Красномир Крачунов</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/2925">Читанка</a>, <a href="http://chitanka.info/admin/book/2925/edit">Админ</a>, <a href="http://sfbg.us/book/KVZR-BGF-0001">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Лабиринт на ужаса – Георги Цанков (предговор) – стр.5
+    * Сградата – Красномир Крачунов – стр.9</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/14080">Сградата</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:14080}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: http://www.biblioteka.by/
+
+	__Издание:__
+	ИК „Квазар“, 2001
+	ISBN: 954–882–603–8
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-П" title="Добавяне на предговор/послеслов">П</span> Завладяването на Америка — Христо Пощаков</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/3209">Читанка</a>, <a href="http://chitanka.info/admin/book/3209/edit">Админ</a>, <a href="http://sfbg.us/book/ARGS-NBF-0048">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">-&gt;  * Напред към Америка! – Александър Драганов (предговор) – стр.7
+    * Завладяването на Америка – Христо Пощаков – стр.8</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/15851">Завладяването на Америка</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:15851}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	Източник: Авторът
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Р" title="Разбиване на произведения">Р</span> Буря се надига — Робърт Джордан, Брандън Сандърсън</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/3254">Читанка</a>, <a href="http://chitanka.info/admin/book/3254/edit">Админ</a>, <a href="http://sfbg.us/book/BARD-KNV-0012">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Предговорът да се отдели?</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/16076">Буря се надига</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:16076}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Робърт Джордан и Брандън Сандърсън. Буря се надига
+	Редактор: Иван Тотоманов
+	Оформление на корица: „Megachrom“, 2010
+	ИК „Бард“, 2010
+	ISBN 978-954-655-108-5
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Р" title="Разбиване на произведения">Р</span> Орки — Стен Никълс</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/3269">Читанка</a>, <a href="http://chitanka.info/admin/book/3269/edit">Админ</a>, <a href="http://sfbg.us/book/BARD-ORK-0001">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Да се разбие на произведения.</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/16097">Орки</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:16097}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Стен Никълс. Орки
+	Английска, първо издание
+	Редактор: Боряна Даракчиева
+	Оформление на корица: „Megachrom“
+	ИК „Бард“, 2005
+	ISBN 954-585-673-4
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Р" title="Разбиване на произведения">Р</span> Патрул във времето — Пол Андерсън</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/3328">Читанка</a>, <a href="http://chitanka.info/admin/book/3328/edit">Админ</a>, <a href="http://sfbg.us/book/KVZR-KBF-0017">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Да се разбие на произведения.</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/16857">Патрул във времето</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:16857}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Пол Андерсън. Патрул във времето
+	Американска, първо издание
+	Редактор: Катя Петрова
+	Оформление на корицата и предпечатна подготовка: „Камея дизайн“
+	Формат 54×84/16. Печатни коли 15
+	ИК „Камея“, 1998
+	ISBN 954-8340-37-2
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Р" title="Разбиване на произведения">Р</span> Диамантената тръба — Иван Ефремов</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/3351">Читанка</a>, <a href="http://chitanka.info/admin/book/3351/edit">Админ</a>, <a href="http://sfbg.us/book/NMLD-PNF-013X">SFBG</a>, <a href="http://biblio.detstvoto.net/index.php?newsid=1681">ПУК!</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Да се разбие на произведения.</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/16903">Диамантената тръба</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:16903}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	И. А. Ефремов. Диамантената тръба
+	Художествено оформление: Борис Ангелушев
+	Редактор: Йордан Стратиев
+	Художествен редактор: Стоян Атанасов
+	Технически редактор: Георги Русафов
+	Коректор: Маргарита Енгьозова
+	Издателство „Народна младеж“
+	Държавен полиграфически комбинат „Димитър Благоев“, София
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-К" title="Корекция">К</span> Принц на кръвта — Реймънд Фийст</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/3509">Читанка</a>, <a href="http://chitanka.info/admin/book/3509/edit">Админ</a>, <a href="http://sfbg.us/book/BARD-SVR-0003">SFBG</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">+3515
+Да се коригира заглавието</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/18320">Принц на кръвта</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:18320}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Реймънд Фийст
+	Сага за войната на разлома (Том трети)
+	Принц на кръвта
+	Кралският корсар
+	Американска, първо издание
+	Редактор: Иван Тотоманов
+	Оформление на корица: „Megachrom“ — Петър Христов, 2000 г.
+	ИК „Бард“, 2000 г.
+	ISBN: 954–585–154–6
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+<section class="book">
+	<h2><span class="todo todo-Н" title="Друга задача">Н</span> Кралският корсар — Реймънд Фийст</h2>
+	<div class="content">
+		<p><a href="http://chitanka.info/book/3515">Читанка</a>, <a href="http://chitanka.info/admin/book/3515/edit">Админ</a></p>
+
+		<div class="template">
+			<h3>Предложение за поправка</h3>
+			<div class="content">Да се махне; обединена с 3509</div>
+		</div>
+
+		<div class="template">
+			<h3>Текущо съдържание</h3>
+			<div class="content">	<a href="http://chitanka.info/text/18752">Кралският корсар</a>
+</div>
+		</div>
+
+		<div class="template half book-template">
+			<h3>Текущ шаблон</h3>
+			<div class="content">	{file:18752}
+</div>
+		</div>
+
+		<div class="template half book-info">
+			<h3>Информация за книгата</h3>
+			<div class="content">	__Издание:__
+	Реймънд Фийст. Сага за войната на разлома (Том трети)
+	Принц на кръвта. Кралският корсар
+	Американска, първо издание
+	Редактор: Иван Тотоманов
+	Оформление на корица: „Megachrom“ — Петър Христов, 2000 г.
+	ИК „Бард“ ООД, 2000 г.
+	ISBN: 954–585–154–6
+</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</section>
+
+</body>
+</html>
